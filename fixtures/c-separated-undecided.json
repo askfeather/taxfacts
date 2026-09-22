@@ -1,0 +1,6 @@
+{
+  "id": "c-separated-undecided",
+  "prose": "We separated in March. I don't know yet whether we'll file together or apart for this year.",
+  "expect": {},
+  "abstain": ["/filer/filingStatus"]
+}

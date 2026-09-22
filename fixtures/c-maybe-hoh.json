@@ -1,0 +1,7 @@
+{
+  "id": "c-maybe-hoh",
+  "prose": "I'm unmarried and my nephew stayed with me for part of the year, I'm not sure how much.",
+  "expect": {},
+  "abstain": ["/filer/filingStatus"],
+  "note": "residency duration decides head of household and is unknown"
+}

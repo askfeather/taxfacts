@@ -72,6 +72,10 @@ export class LlmBackend implements DecisionBackend {
       body: JSON.stringify({
         model: this.model,
         temperature: 0,
+        // A 52-option state question makes the model WRITE 52 numbers. Jev
+        // returns that distribution natively, so this ceiling is a cost the
+        // general-model route pays and the decision-model route does not.
+        max_tokens: 8000,
         messages: [
           { role: 'system', content: SYSTEM },
           { role: 'user', content: state },
@@ -101,10 +105,14 @@ export class LlmBackend implements DecisionBackend {
       choices: { message: { content: string } }[];
       usage?: { prompt_tokens?: number; cost?: number };
     };
-    const raw = JSON.parse(json.choices[0]?.message.content ?? '{}') as Record<
-      string,
-      Record<string, number>
-    >;
+    let raw: Record<string, Record<string, number>> = {};
+    try {
+      raw = JSON.parse(json.choices[0]?.message.content ?? '{}');
+    } catch {
+      // Truncated output. Returning no answers makes every path abstain,
+      // which is the honest reading: the engine did not answer.
+      return { answers: {}, inputTokens: json.usage?.prompt_tokens ?? 0 };
+    }
 
     const answers: Record<string, Answer> = {};
     for (const [key, q] of Object.entries(questions)) {

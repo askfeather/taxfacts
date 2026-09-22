@@ -1,0 +1,10 @@
+{
+  "id": "b-two-cities-one-home",
+  "prose": "I flew to Las Vegas for a conference and to Miami to see family, but home is St. Louis. Single.",
+  "expect": {
+    "/filer/address/state": "MO",
+    "/filer/filingStatus": "single"
+  },
+  "abstain": [],
+  "note": "two decoy cities precede the real one"
+}

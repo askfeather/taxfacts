@@ -1,0 +1,11 @@
+{
+  "id": "a-ssn-with-dashes",
+  "prose": "SSN 987-65-4321, ZIP 97205, filing on my own, 41 years old.",
+  "expect": {
+    "/filer/ssn": "987-65-4321",
+    "/filer/address/zip": "97205",
+    "/filer/filingStatus": "single",
+    "/filer/age": 41
+  },
+  "abstain": []
+}

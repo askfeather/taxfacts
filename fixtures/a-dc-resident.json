@@ -1,0 +1,10 @@
+{
+  "id": "a-dc-resident",
+  "prose": "I live in Washington DC and file alone. 33 years old.",
+  "expect": {
+    "/filer/address/state": "DC",
+    "/filer/filingStatus": "single",
+    "/filer/age": 33
+  },
+  "abstain": []
+}

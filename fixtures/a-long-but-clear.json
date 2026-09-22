@@ -1,0 +1,10 @@
+{
+  "id": "a-long-but-clear",
+  "prose": "Busy year: sold rental property, rolled over a 401k, paid tuition for my son, and had surgery in the spring. Through all of it my husband and I filed the way we always do, one joint return. I'm 55 and we've been in Columbus the entire time.",
+  "expect": {
+    "/filer/filingStatus": "mfj",
+    "/filer/age": 55,
+    "/filer/address/state": "OH"
+  },
+  "abstain": []
+}

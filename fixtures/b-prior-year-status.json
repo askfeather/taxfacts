@@ -1,0 +1,9 @@
+{
+  "id": "b-prior-year-status",
+  "prose": "In 2024 I filed as single. I got married in December 2025 and we filed jointly for 2025. Nothing changed in 2026.",
+  "expect": {
+    "/filer/filingStatus": "mfj"
+  },
+  "abstain": [],
+  "note": "an earlier status is stated first"
+}

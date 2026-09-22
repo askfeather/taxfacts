@@ -1,0 +1,10 @@
+{
+  "id": "a-single-never-married",
+  "prose": "Never been married, no dependents, 26. Living in Nashville.",
+  "expect": {
+    "/filer/filingStatus": "single",
+    "/filer/age": 26,
+    "/filer/address/state": "TN"
+  },
+  "abstain": []
+}

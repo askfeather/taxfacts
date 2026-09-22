@@ -1,0 +1,10 @@
+{
+  "id": "a-state-capital",
+  "prose": "I've lived in Boise my whole life. Single, 38.",
+  "expect": {
+    "/filer/address/state": "ID",
+    "/filer/filingStatus": "single",
+    "/filer/age": 38
+  },
+  "abstain": []
+}

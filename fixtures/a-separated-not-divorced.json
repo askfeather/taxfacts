@@ -1,0 +1,9 @@
+{
+  "id": "a-separated-not-divorced",
+  "prose": "We separated in August but we're not divorced, and we're each filing our own return. I'm 44.",
+  "expect": {
+    "/filer/filingStatus": "mfs",
+    "/filer/age": 44
+  },
+  "abstain": []
+}

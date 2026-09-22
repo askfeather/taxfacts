@@ -1,0 +1,7 @@
+{
+  "id": "d-corporate-tax",
+  "prose": "Our C corp needs to true up its state apportionment across three jurisdictions before the extended deadline.",
+  "expect": {},
+  "abstain": ["/filer/filingStatus", "/filer/age", "/filer/blind"],
+  "note": "a real tax question, but about an entity rather than an individual filer"
+}

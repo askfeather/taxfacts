@@ -1,0 +1,10 @@
+{
+  "id": "b-employer-state",
+  "prose": "I work for a company headquartered in Delaware but I've never set foot there. I live and work remotely from Tucson. Single.",
+  "expect": {
+    "/filer/address/state": "AZ",
+    "/filer/filingStatus": "single"
+  },
+  "abstain": [],
+  "note": "Delaware belongs to the employer"
+}

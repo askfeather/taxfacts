@@ -1,0 +1,11 @@
+{
+  "id": "b-blind-metaphor",
+  "prose": "I've been flying blind on my own bookkeeping all year. Single filer, 45, in Omaha.",
+  "expect": {
+    "/filer/filingStatus": "single",
+    "/filer/age": 45,
+    "/filer/address/state": "NE"
+  },
+  "abstain": ["/filer/blind"],
+  "note": "'flying blind' is idiom, not a disability claim"
+}

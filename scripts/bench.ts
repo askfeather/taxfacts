@@ -17,8 +17,19 @@ import { FILER_PATHS } from '../src/paths';
 import { add, EMPTY, type Fixture, type Score, scoreOne } from '../src/score';
 import type { AskResult, DecisionBackend } from '../src/types';
 
+/**
+ * Three engines, so the comparison can separate model CLASS from model SIZE.
+ * If a bigger general model abstains properly, the finding is about scale.
+ * If it does not, the finding is about what kind of model this is.
+ */
+const ENGINES: Record<string, string | null> = {
+  jev: null,
+  'flash-lite': 'google/gemini-2.5-flash-lite',
+  flash: 'google/gemini-2.5-flash',
+};
 const engineArg = process.argv.indexOf('--engine');
 const ENGINE = engineArg > -1 ? (process.argv[engineArg + 1] ?? 'jev') : 'jev';
+if (!(ENGINE in ENGINES)) throw new Error(`unknown engine: ${ENGINE}`);
 const CACHE = `bench-cache-${ENGINE}.json`;
 const GATES = [0.5, 0.7, 0.8, 0.9, 0.95, 0.98, 0.99, 0.995];
 
@@ -35,10 +46,10 @@ let cache: Cache = {};
 if (live) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key) throw new Error('OPENROUTER_API_KEY is not set');
-  const backend =
-    ENGINE === 'jev'
-      ? new JevBackend(key, { route: 'openrouter' })
-      : new LlmBackend(key);
+  const model = ENGINES[ENGINE];
+  const backend = model
+    ? new LlmBackend(key, model)
+    : new JevBackend(key, { route: 'openrouter' });
   const questions = Object.fromEntries(
     FILER_PATHS.filter((s) => s.question).map((s) => [s.path, s.question]),
   );

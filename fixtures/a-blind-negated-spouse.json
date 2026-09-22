@@ -1,0 +1,10 @@
+{
+  "id": "a-blind-negated-spouse",
+  "prose": "I'm legally blind, my wife is not. Joint return, Wisconsin.",
+  "expect": {
+    "/filer/blind": true,
+    "/filer/filingStatus": "mfj",
+    "/filer/address/state": "WI"
+  },
+  "abstain": []
+}

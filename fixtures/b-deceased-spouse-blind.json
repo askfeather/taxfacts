@@ -1,0 +1,11 @@
+{
+  "id": "b-deceased-spouse-blind",
+  "prose": "My late wife was legally blind. I file alone now, 71, in Little Rock.",
+  "expect": {
+    "/filer/filingStatus": "single",
+    "/filer/age": 71,
+    "/filer/address/state": "AR"
+  },
+  "abstain": ["/spouse/blind"],
+  "note": "there is no spouse this year"
+}

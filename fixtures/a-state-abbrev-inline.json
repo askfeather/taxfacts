@@ -1,0 +1,10 @@
+{
+  "id": "a-state-abbrev-inline",
+  "prose": "Primary residence is in Charlotte, NC. Married, joint return. Age 49.",
+  "expect": {
+    "/filer/address/state": "NC",
+    "/filer/filingStatus": "mfj",
+    "/filer/age": 49
+  },
+  "abstain": []
+}

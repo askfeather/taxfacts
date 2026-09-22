@@ -1,0 +1,10 @@
+{
+  "id": "c-portland-ambiguous",
+  "prose": "I live in Portland. Single, 30.",
+  "expect": {
+    "/filer/filingStatus": "single",
+    "/filer/age": 30
+  },
+  "abstain": ["/filer/address/state"],
+  "note": "Portland is in both Oregon and Maine; the text does not disambiguate"
+}

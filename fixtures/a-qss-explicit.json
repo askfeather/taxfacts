@@ -1,0 +1,8 @@
+{
+  "id": "a-qss-explicit",
+  "prose": "My wife died in 2025 and I still have my 9-year-old at home. I'm told I can use the surviving spouse rates for 2026.",
+  "expect": {
+    "/filer/filingStatus": "qss"
+  },
+  "abstain": []
+}

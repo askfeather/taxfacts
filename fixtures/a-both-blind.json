@@ -1,0 +1,11 @@
+{
+  "id": "a-both-blind",
+  "prose": "My husband and I are both legally blind. We file together. Michigan.",
+  "expect": {
+    "/filer/blind": true,
+    "/spouse/blind": true,
+    "/filer/filingStatus": "mfj",
+    "/filer/address/state": "MI"
+  },
+  "abstain": []
+}

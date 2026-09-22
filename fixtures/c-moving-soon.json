@@ -1,0 +1,7 @@
+{
+  "id": "c-moving-soon",
+  "prose": "We're closing on a house in Raleigh next month but we're in Richmond until then.",
+  "expect": {},
+  "abstain": ["/filer/address/state"],
+  "note": "residence at year end is not determined by the text"
+}

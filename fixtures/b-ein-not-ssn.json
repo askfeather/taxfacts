@@ -1,0 +1,9 @@
+{
+  "id": "b-ein-not-ssn",
+  "prose": "My business EIN is 84-1234567. I file my personal return as single.",
+  "expect": {
+    "/filer/filingStatus": "single"
+  },
+  "abstain": ["/filer/ssn"],
+  "note": "an EIN must not be read as an SSN"
+}

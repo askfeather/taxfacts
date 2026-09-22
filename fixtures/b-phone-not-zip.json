@@ -1,0 +1,10 @@
+{
+  "id": "b-phone-not-zip",
+  "prose": "You can reach me on 303-555-0147. I live in Cheyenne, filing single.",
+  "expect": {
+    "/filer/address/state": "WY",
+    "/filer/filingStatus": "single"
+  },
+  "abstain": ["/filer/address/zip"],
+  "note": "a phone number contains digit runs that must not be read as a ZIP"
+}

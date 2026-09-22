@@ -1,0 +1,9 @@
+{
+  "id": "a-hoh-parent",
+  "prose": "I'm unmarried and my mother lives with me all year, I cover more than half the household costs. Filing as head of household. 52 years old.",
+  "expect": {
+    "/filer/filingStatus": "hoh",
+    "/filer/age": 52
+  },
+  "abstain": []
+}

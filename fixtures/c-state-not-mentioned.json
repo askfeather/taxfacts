@@ -1,0 +1,9 @@
+{
+  "id": "c-state-not-mentioned",
+  "prose": "Married filing jointly, 47, two kids in college.",
+  "expect": {
+    "/filer/filingStatus": "mfj",
+    "/filer/age": 47
+  },
+  "abstain": ["/filer/address/state"]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "a-plain-mfs-reason",
+  "prose": "We file separately because of my wife's student loan repayment plan. I'm 36.",
+  "expect": {
+    "/filer/filingStatus": "mfs",
+    "/filer/age": 36
+  },
+  "abstain": []
+}

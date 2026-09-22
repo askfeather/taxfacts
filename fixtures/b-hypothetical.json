@@ -1,0 +1,10 @@
+{
+  "id": "b-hypothetical",
+  "prose": "If I were to get married before December, would we file jointly? Right now I'm single in Idaho.",
+  "expect": {
+    "/filer/filingStatus": "single",
+    "/filer/address/state": "ID"
+  },
+  "abstain": [],
+  "note": "a hypothetical marriage must not override the stated current status"
+}

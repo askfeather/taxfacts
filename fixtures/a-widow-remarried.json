@@ -1,0 +1,10 @@
+{
+  "id": "a-widow-remarried",
+  "prose": "My first husband died in 2019. I remarried in 2023 and we file one return together. I'm 61, in Maine.",
+  "expect": {
+    "/filer/filingStatus": "mfj",
+    "/filer/age": 61,
+    "/filer/address/state": "ME"
+  },
+  "abstain": []
+}

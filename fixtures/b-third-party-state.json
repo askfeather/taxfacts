@@ -1,0 +1,11 @@
+{
+  "id": "b-third-party-state",
+  "prose": "My brother lives in Texas and keeps telling me to move there. I'm still in Vermont. Single, 39.",
+  "expect": {
+    "/filer/address/state": "VT",
+    "/filer/filingStatus": "single",
+    "/filer/age": 39
+  },
+  "abstain": [],
+  "note": "Texas belongs to the brother"
+}

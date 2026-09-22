@@ -1,0 +1,9 @@
+{
+  "id": "a-hoh-after-divorce",
+  "prose": "Divorce finalized in 2024. My daughter lives with me ten months of the year and I pay the mortgage. Head of household. Kansas.",
+  "expect": {
+    "/filer/filingStatus": "hoh",
+    "/filer/address/state": "KS"
+  },
+  "abstain": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "b-future-age",
+  "prose": "I turn 65 next March. Married filing jointly, living in Hartford.",
+  "expect": {
+    "/filer/filingStatus": "mfj",
+    "/filer/address/state": "CT"
+  },
+  "abstain": ["/filer/age"],
+  "note": "a future age is not this year's age"
+}

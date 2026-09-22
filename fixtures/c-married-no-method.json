@@ -1,0 +1,6 @@
+{
+  "id": "c-married-no-method",
+  "prose": "We got married this year. Haven't decided how we're filing yet.",
+  "expect": {},
+  "abstain": ["/filer/filingStatus"]
+}

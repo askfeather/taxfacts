@@ -1,0 +1,10 @@
+{
+  "id": "b-third-party-age",
+  "prose": "My daughter is 19 and my son is 22. I'm 48. We file jointly with my wife.",
+  "expect": {
+    "/filer/age": 48,
+    "/filer/filingStatus": "mfj"
+  },
+  "abstain": [],
+  "note": "two other ages appear before the filer's"
+}

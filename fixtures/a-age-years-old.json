@@ -1,0 +1,10 @@
+{
+  "id": "a-age-years-old",
+  "prose": "I'm 70 years old, my wife is 68, we file jointly and live in Sarasota.",
+  "expect": {
+    "/filer/age": 70,
+    "/filer/filingStatus": "mfj",
+    "/filer/address/state": "FL"
+  },
+  "abstain": []
+}

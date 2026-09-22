@@ -1,0 +1,7 @@
+{
+  "id": "b-client-not-filer",
+  "prose": "I'm a CPA. My client got married in June and lives in Denver. She's 42.",
+  "expect": {},
+  "abstain": ["/filer/filingStatus", "/filer/address/state", "/filer/age"],
+  "note": "the facts belong to a third party, not to the person writing"
+}

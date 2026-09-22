@@ -1,0 +1,11 @@
+{
+  "id": "d-sports-report",
+  "prose": "The second half was scrappy. Two yellow cards and a disallowed goal in the 88th minute.",
+  "expect": {},
+  "abstain": [
+    "/filer/filingStatus",
+    "/filer/address/state",
+    "/filer/blind",
+    "/spouse/blind"
+  ]
+}

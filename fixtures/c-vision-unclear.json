@@ -1,0 +1,7 @@
+{
+  "id": "c-vision-unclear",
+  "prose": "My eyesight has gotten much worse this year, the doctor mentioned legal blindness might apply.",
+  "expect": {},
+  "abstain": ["/filer/blind"],
+  "note": "a possibility raised by a doctor is not a determination"
+}

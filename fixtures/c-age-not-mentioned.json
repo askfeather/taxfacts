@@ -1,0 +1,9 @@
+{
+  "id": "c-age-not-mentioned",
+  "prose": "Single filer in Portland, Maine. No dependents.",
+  "expect": {
+    "/filer/filingStatus": "single",
+    "/filer/address/state": "ME"
+  },
+  "abstain": ["/filer/age"]
+}

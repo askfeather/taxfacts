@@ -1,0 +1,10 @@
+{
+  "id": "b-spouse-age-only",
+  "prose": "My wife is 62. We file jointly in Oregon.",
+  "expect": {
+    "/filer/filingStatus": "mfj",
+    "/filer/address/state": "OR"
+  },
+  "abstain": ["/filer/age"],
+  "note": "only the spouse's age is given; the filer's must not be taken from it"
+}
