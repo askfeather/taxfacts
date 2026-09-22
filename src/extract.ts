@@ -36,13 +36,21 @@ function buildQuestions(specs: PathSpec[]): Record<string, Question> {
   return qs;
 }
 
+/**
+ * Below this a `noul` is a confident no, which is silence. Mirroring the gate
+ * as `1 - gate` was wrong: measured, an unmentioned fact comes back at 0.02 to
+ * 0.03, not 0, so a 0.01 floor called every silent fact ambiguous. Ambiguity is
+ * a middle band, not the complement of certainty.
+ */
+export const SILENCE = 0.1;
+
 /** Reads one answer through the gate. Returns undefined when it does not pass. */
 function gated(answer: Answer | undefined, gate: number) {
   if (!answer) return undefined;
   if (answer.type === 'noul')
     return answer.noul >= gate
       ? { value: true, p: answer.noul }
-      : { value: false, p: 1 - answer.noul, weak: answer.noul > 1 - gate };
+      : { value: false, p: 1 - answer.noul, weak: answer.noul >= SILENCE };
   if (answer.type === 'choice')
     return answer.confidence >= gate
       ? { value: answer.choice, p: answer.confidence }
@@ -73,7 +81,7 @@ export async function extract(
   }
 
   const asked = specs.filter((s) => s.via === 'jev');
-  const { answers, inputTokens } = await opts.backend.ask(
+  const { answers, inputTokens, cost } = await opts.backend.ask(
     text,
     buildQuestions(asked),
   );
@@ -90,6 +98,7 @@ export async function extract(
         },
       ],
       inputTokens,
+      cost,
     };
   }
 
@@ -135,5 +144,5 @@ export async function extract(
       });
   }
 
-  return { facts, needs, inputTokens };
+  return { facts, needs, inputTokens, cost };
 }

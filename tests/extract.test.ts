@@ -66,6 +66,32 @@ describe('the confidence gate', () => {
   });
 });
 
+describe('silence versus ambiguity on a noul', () => {
+  // Measured against the live model: an unmentioned fact comes back at
+  // 0.02-0.03, never 0. Treating those as ambiguous buried the real needs.
+  it('treats a confident no as silence, not as a need', async () => {
+    const out = await extract('I got married in June.', {
+      backend: stub({
+        __in_domain: inDomain,
+        '/filer/blind': { type: 'noul', noul: 0.03 },
+      }).backend,
+    });
+    expect(out.needs.some((n) => n.path === '/filer/blind')).toBe(false);
+    expect(out.facts.some((f) => f.path === '/filer/blind')).toBe(false);
+  });
+
+  it('flags the middle band as ambiguous', async () => {
+    const out = await extract('He mentioned his vision is failing.', {
+      backend: stub({
+        __in_domain: inDomain,
+        '/filer/blind': { type: 'noul', noul: 0.45 },
+      }).backend,
+    });
+    const need = out.needs.find((n) => n.path === '/filer/blind');
+    expect(need?.why).toMatch(/ambiguous/);
+  });
+});
+
 describe('the in-domain screen', () => {
   it('attempts nothing when the text is not a tax situation', async () => {
     const out = await extract('Cream the butter and sugar, then fold in.', {

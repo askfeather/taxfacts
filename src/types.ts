@@ -22,6 +22,8 @@ export type Answer =
 export interface AskResult {
   answers: Record<string, Answer>;
   inputTokens: number;
+  /** Gateways report it; TypeSafe direct does not. */
+  cost?: number;
 }
 
 /**
@@ -55,4 +57,5 @@ export interface Extraction {
   facts: Fact[];
   needs: Needed[];
   inputTokens: number;
+  cost?: number;
 }
