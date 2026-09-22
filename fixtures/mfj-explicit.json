@@ -1,0 +1,9 @@
+{
+  "id": "mfj-explicit",
+  "prose": "My wife and I file one return together every year. We live in Ohio.",
+  "expect": {
+    "/filer/filingStatus": "mfj",
+    "/filer/address/state": "OH"
+  },
+  "abstain": []
+}

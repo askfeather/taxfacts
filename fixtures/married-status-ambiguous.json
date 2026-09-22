@@ -1,0 +1,10 @@
+{
+  "id": "married-status-ambiguous",
+  "prose": "I got married in June and bought a house in Denver. I am 42.",
+  "expect": {
+    "/filer/age": 42,
+    "/filer/address/state": "CO"
+  },
+  "abstain": ["/filer/filingStatus"],
+  "note": "married is implied but joint vs separate is undetermined"
+}

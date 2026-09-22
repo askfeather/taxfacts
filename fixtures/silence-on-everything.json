@@ -1,0 +1,12 @@
+{
+  "id": "silence-on-everything",
+  "prose": "I need help understanding whether my consulting income is qualified business income.",
+  "expect": {},
+  "abstain": [
+    "/filer/filingStatus",
+    "/filer/address/state",
+    "/filer/blind",
+    "/spouse/blind"
+  ],
+  "note": "a real tax question that states no filer facts at all"
+}

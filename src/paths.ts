@@ -26,9 +26,18 @@ export interface PathSpec {
 
 const ssn = (t: string) => /\b(\d{3}-\d{2}-\d{4})\b/.exec(t)?.[1];
 const zip = (t: string) => /\b(\d{5})(?:-\d{4})?\b/.exec(t)?.[1];
+/**
+ * "I'm 42", "42 years old", "age 58". Deliberately not a bare number after a
+ * comma ("Single, 34") - too many false positives - and deliberately not a
+ * future age ("I turn 65 in November"), which is not the age for this year.
+ */
 const age = (t: string) => {
-  const m = /\bI(?:'m| am)\s+(\d{1,3})\b|\bage[d]?\s+(\d{1,3})\b/i.exec(t);
-  const n = Number(m?.[1] ?? m?.[2]);
+  if (/\bturns?\s+\d{1,3}\b/i.test(t)) return undefined;
+  const m =
+    /\bI(?:'m|\s+am)\s+(\d{1,3})\b|\b(\d{1,3})\s+years?\s+old\b|\bage[d]?\s+(\d{1,3})\b/i.exec(
+      t,
+    );
+  const n = Number(m?.[1] ?? m?.[2] ?? m?.[3]);
   return Number.isInteger(n) && n > 0 && n < 120 ? n : undefined;
 };
 
@@ -62,7 +71,8 @@ export const FILER_PATHS: PathSpec[] = [
       type: 'choice',
       instructions: "The taxpayer's federal filing status for the tax year.",
       criteria: {
-        single: 'Unmarried, and no dependents making them head of household.',
+        single:
+          'Unmarried, or files alone, and has no dependent making them head of household.',
         mfj: 'Married and filing one joint return with their spouse.',
         mfs: 'Married but filing a separate return from their spouse.',
         hoh: 'Unmarried and maintaining a home for a qualifying person.',

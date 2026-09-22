@@ -1,0 +1,9 @@
+{
+  "id": "hoh",
+  "prose": "I'm divorced and my two kids live with me all year. I pay for the house myself. Georgia.",
+  "expect": {
+    "/filer/filingStatus": "hoh",
+    "/filer/address/state": "GA"
+  },
+  "abstain": []
+}

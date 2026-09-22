@@ -1,0 +1,10 @@
+{
+  "id": "ssn-and-zip",
+  "prose": "My SSN is 123-45-6789 and my ZIP is 80202. Single filer.",
+  "expect": {
+    "/filer/ssn": "123-45-6789",
+    "/filer/address/zip": "80202",
+    "/filer/filingStatus": "single"
+  },
+  "abstain": []
+}

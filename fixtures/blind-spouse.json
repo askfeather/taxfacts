@@ -1,0 +1,10 @@
+{
+  "id": "blind-spouse",
+  "prose": "My wife is legally blind. We file jointly. We're in Illinois.",
+  "expect": {
+    "/spouse/blind": true,
+    "/filer/filingStatus": "mfj",
+    "/filer/address/state": "IL"
+  },
+  "abstain": []
+}

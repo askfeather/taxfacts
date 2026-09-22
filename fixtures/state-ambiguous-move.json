@@ -1,0 +1,7 @@
+{
+  "id": "state-ambiguous-move",
+  "prose": "I lived in Oregon for the first half of the year and Washington for the second half.",
+  "expect": {},
+  "abstain": ["/filer/address/state"],
+  "note": "part-year in two states; no single state of residence"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "qss",
+  "prose": "My husband passed away last year. I have a dependent son at home and I'm told I can still use the joint rates.",
+  "expect": {
+    "/filer/filingStatus": "qss"
+  },
+  "abstain": []
+}

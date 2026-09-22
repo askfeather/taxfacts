@@ -1,0 +1,10 @@
+{
+  "id": "negation-not-married",
+  "prose": "I am not married and I have no dependents. 31 years old, living in Nevada.",
+  "expect": {
+    "/filer/filingStatus": "single",
+    "/filer/age": 31,
+    "/filer/address/state": "NV"
+  },
+  "abstain": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "negation-not-blind",
+  "prose": "I am not blind and neither is my wife. We file jointly in Virginia.",
+  "expect": {
+    "/filer/filingStatus": "mfj",
+    "/filer/address/state": "VA"
+  },
+  "abstain": [],
+  "note": "an explicit negative currently produces no fact at all, the same as silence. Defensible because absence already means false downstream, but it means we cannot distinguish 'asked and answered no' from 'never asked'"
+}

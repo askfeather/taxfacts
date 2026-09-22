@@ -1,0 +1,12 @@
+{
+  "id": "out-of-domain-lookalike",
+  "prose": "The tax on this invoice looks wrong. We were charged 8.25% but the state rate should be 6.25%.",
+  "expect": {},
+  "abstain": [
+    "/filer/filingStatus",
+    "/filer/address/state",
+    "/filer/blind",
+    "/spouse/blind"
+  ],
+  "note": "sales tax on an invoice is not a personal return situation; tempting vocabulary"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "age-indirect",
+  "prose": "I turn 65 in November, so I think the extra standard deduction applies. Filing with my husband.",
+  "expect": {
+    "/filer/filingStatus": "mfj"
+  },
+  "abstain": ["/filer/age"],
+  "note": "age is stated as a future event, not a current value; the regex must not read 65 as the age"
+}

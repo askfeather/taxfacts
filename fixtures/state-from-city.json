@@ -1,0 +1,10 @@
+{
+  "id": "state-from-city",
+  "prose": "I moved to Philadelphia for work in March. Single, 34.",
+  "expect": {
+    "/filer/address/state": "PA",
+    "/filer/filingStatus": "single",
+    "/filer/age": 34
+  },
+  "abstain": []
+}

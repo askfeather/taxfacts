@@ -1,0 +1,7 @@
+{
+  "id": "contradiction",
+  "prose": "I'm single. Well, my wife handles the paperwork, so maybe we file together, I'm not sure.",
+  "expect": {},
+  "abstain": ["/filer/filingStatus"],
+  "note": "the text contradicts itself; abstaining is the only correct answer"
+}

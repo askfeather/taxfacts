@@ -1,0 +1,10 @@
+{
+  "id": "long-narrative-distractors",
+  "prose": "Long year. I sold some Apple stock in March at a gain, rolled an old 401k into an IRA, paid about 14,000 in mortgage interest, donated a car to a charity in Salt Lake City, and my daughter started college. My husband and I have always filed one return together. I'm 47.",
+  "expect": {
+    "/filer/filingStatus": "mfj",
+    "/filer/age": 47
+  },
+  "abstain": ["/filer/address/state"],
+  "note": "many irrelevant facts around two real ones. Salt Lake City is where the charity is, not where the filer lives, so residence must NOT be inferred from it - the first version of this fixture got that wrong, the model did not"
+}

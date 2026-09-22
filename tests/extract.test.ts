@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { extract } from '../src/extract';
+import { extract, GATE, IN_DOMAIN_FLOOR } from '../src/extract';
 import { FILER_PATHS, NOT_STATED } from '../src/paths';
 import type { Answer, DecisionBackend, Question } from '../src/types';
 
@@ -152,6 +152,34 @@ describe('what the model is never asked', () => {
       const need = out.needs.find((n) => n.path === s.path);
       expect(need?.why).toMatch(/never a string/);
     }
+  });
+});
+
+describe('the thresholds the corpus chose', () => {
+  it('gates at the top of the measured plateau, not above it', () => {
+    // 0.95 keeps 96 of 102 expected facts with zero wrong values and zero
+    // overreach. 0.99 drops 13 more and starts flapping run to run.
+    expect(GATE).toBe(0.95);
+  });
+
+  it('screens in-domain between the two measured clusters', () => {
+    // Out-of-domain tops out at 0.18, the weakest real filer sentence is 0.39.
+    expect(IN_DOMAIN_FLOOR).toBeGreaterThan(0.18);
+    expect(IN_DOMAIN_FLOOR).toBeLessThan(0.39);
+  });
+
+  it('admits a real sentence that the old 0.5 screen rejected', async () => {
+    const out = await extract('My SSN is 123-45-6789. Single filer.', {
+      backend: stub({
+        __in_domain: { type: 'noul', noul: 0.39 },
+        '/filer/filingStatus': choice('single', 1),
+      }).backend,
+    });
+    expect(
+      out.facts.some(
+        (f) => f.path === '/filer/filingStatus' && f.status === 'complete',
+      ),
+    ).toBe(true);
   });
 });
 

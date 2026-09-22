@@ -1,0 +1,11 @@
+{
+  "id": "blind-filer",
+  "prose": "I am legally blind and I file on my own. I live in Arizona and I'm 58.",
+  "expect": {
+    "/filer/blind": true,
+    "/filer/filingStatus": "single",
+    "/filer/age": 58,
+    "/filer/address/state": "AZ"
+  },
+  "abstain": []
+}

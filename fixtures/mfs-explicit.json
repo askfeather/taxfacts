@@ -1,0 +1,8 @@
+{
+  "id": "mfs-explicit",
+  "prose": "We are married but we each file our own separate return. Has been that way since 2023.",
+  "expect": {
+    "/filer/filingStatus": "mfs"
+  },
+  "abstain": []
+}

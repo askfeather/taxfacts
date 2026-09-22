@@ -12,9 +12,22 @@ import type {
  * The model never abstains on its own. An independent pre-registered run fed
  * it 30 out-of-scope inputs and it flagged none, scoring a cake recipe at 0.94
  * and random letters at 0.97. Its confidence is also uninformative between
- * 0.50 and 0.95 and only reliable at the top, so the gate sits there.
+ * 0.50 and 0.95 and only reliable at the top.
+ *
+ * 0.99 was the first guess and the corpus says it is wrong: it discards 14 of
+ * 87 correct facts and starts flapping, because confidence is quantized to
+ * 0.01 and 0.99 sits on a rounding boundary. 0.95 is the top of the plateau -
+ * maximum correct, zero overreach, zero run-to-run variance.
  */
-export const GATE = 0.99;
+export const GATE = 0.95;
+
+/**
+ * Measured separation on the fixture corpus: a recipe scores 0.01 and an
+ * invoice sales-tax question 0.17, while the weakest genuine filer sentence
+ * scores 0.39. A 0.5 cut sat inside the in-domain cluster and rejected real
+ * input, so the abort sits between the two clusters instead.
+ */
+export const IN_DOMAIN_FLOOR = 0.3;
 
 /** Cheap in-domain screen, because the model will answer anything. */
 const IN_DOMAIN =
@@ -87,7 +100,7 @@ export async function extract(
   );
 
   const domain = answers[IN_DOMAIN_KEY];
-  if (domain?.type === 'noul' && domain.noul < 0.5) {
+  if (domain?.type === 'noul' && domain.noul < IN_DOMAIN_FLOOR) {
     return {
       facts,
       needs: [

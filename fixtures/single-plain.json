@@ -1,0 +1,10 @@
+{
+  "id": "single-plain",
+  "prose": "I'm single, no kids, 29 years old. Just a regular W-2 job in Austin.",
+  "expect": {
+    "/filer/filingStatus": "single",
+    "/filer/age": 29,
+    "/filer/address/state": "TX"
+  },
+  "abstain": []
+}

@@ -1,0 +1,9 @@
+{
+  "id": "state-explicit-code",
+  "prose": "Resident of NY the whole year. Married filing jointly.",
+  "expect": {
+    "/filer/address/state": "NY",
+    "/filer/filingStatus": "mfj"
+  },
+  "abstain": []
+}
