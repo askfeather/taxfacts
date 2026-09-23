@@ -1,8 +1,8 @@
 {
   "name": "taxfacts",
   "version": "0.0.0",
-  "private": true,
-  "description": "Spike: turn taxpayer prose into typed tax facts using a System One decision model.",
+  "private": false,
+  "description": "Turn what a taxpayer writes into typed tax facts, and an explicit list of what the text does not say.",
   "type": "module",
   "scripts": {
     "test": "vitest run",
@@ -17,5 +17,37 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
+  },
+  "license": "Apache-2.0",
+  "author": "Feather AI, Inc. (https://askfeather.ai)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askfeather/taxfacts.git"
+  },
+  "homepage": "https://github.com/askfeather/taxfacts#readme",
+  "bugs": {
+    "url": "https://github.com/askfeather/taxfacts/issues"
+  },
+  "keywords": [
+    "tax",
+    "irs",
+    "fact-graph",
+    "extraction",
+    "jev",
+    "typesafe",
+    "structured-output",
+    "abstention",
+    "calibration",
+    "1040"
+  ],
+  "files": [
+    "src",
+    "fixtures",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
   }
 }

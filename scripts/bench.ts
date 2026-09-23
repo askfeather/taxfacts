@@ -6,8 +6,11 @@
  * matters: confidence moves between identical calls, so re-calling per gate
  * would measure that noise rather than the threshold.
  *
- *   OPENROUTER_API_KEY=... npx tsx scripts/bench.ts --live --runs 3
- *   npx tsx scripts/bench.ts                 # re-score the cache, no network
+ *   npx tsx scripts/bench.ts --engine jev    # re-score published data, free
+ *   OPENROUTER_API_KEY=... npx tsx scripts/bench.ts --live --runs 3 --engine jev
+ *
+ * Every response we measured is committed under bench-data/, so the tables in
+ * the README can be reproduced without an API key and without trusting us.
  */
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { extract } from '../src/extract';
@@ -30,7 +33,12 @@ const ENGINES: Record<string, string | null> = {
 const engineArg = process.argv.indexOf('--engine');
 const ENGINE = engineArg > -1 ? (process.argv[engineArg + 1] ?? 'jev') : 'jev';
 if (!(ENGINE in ENGINES)) throw new Error(`unknown engine: ${ENGINE}`);
-const CACHE = `bench-cache-${ENGINE}.json`;
+const NAMES: Record<string, string> = {
+  jev: 'jev',
+  'flash-lite': 'gemini-2.5-flash-lite',
+  flash: 'gemini-2.5-flash',
+};
+const CACHE = `bench-data/${NAMES[ENGINE] ?? ENGINE}.json`;
 const GATES = [0.5, 0.7, 0.8, 0.9, 0.95, 0.98, 0.99, 0.995];
 
 const fixtures: Fixture[] = readdirSync('fixtures')

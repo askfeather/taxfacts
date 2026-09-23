@@ -1,0 +1,55 @@
+name: Add a test case
+description: A sentence we get wrong, and the authority that says so. No code needed.
+title: "fixture: "
+labels: ["fixture"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You do not need to clone anything or write TypeScript. Fill this in and
+        a maintainer turns it into a test case.
+
+        **Use invented details only.** Never paste a real client's words, name,
+        SSN, EIN or address.
+  - type: textarea
+    id: prose
+    attributes:
+      label: The sentence
+      description: What a taxpayer might write. Invented, not real.
+      placeholder: I got married in June and bought a house in Denver. I am 42.
+    validations: { required: true }
+  - type: textarea
+    id: expect
+    attributes:
+      label: Facts the sentence DOES determine
+      description: One per line, as `path = value`. Leave blank if none.
+      placeholder: |
+        /filer/age = 42
+        /filer/address/state = CO
+  - type: textarea
+    id: abstain
+    attributes:
+      label: Facts it must NOT guess
+      description: One path per line. These are the cases that matter most.
+      placeholder: /filer/filingStatus
+  - type: input
+    id: authority
+    attributes:
+      label: Authority
+      description: The IRC section, form line, Rev. Proc. or publication that settles it.
+      placeholder: 26 U.S.C. §1, §2
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this is the right answer
+      description: One or two sentences. Especially useful when abstaining is correct.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmations
+      options:
+        - label: This is invented. It is not a real taxpayer's words or details.
+          required: true
+        - label: I checked the authority myself rather than taking a model's word for it.
+          required: true

@@ -1,0 +1,12 @@
+taxfacts
+Copyright 2026 Feather AI, Inc.
+
+This product includes software developed at Feather AI, Inc. (https://askfeather.ai).
+
+taxfacts is not affiliated with, endorsed by, or connected to TypeSafe AI, Inc.,
+Google LLC, or the Internal Revenue Service. "Jev" and "TypeSafe" are used only
+to identify the third-party service this software can call. "Gemini" is used
+only to identify the models measured in the published benchmark.
+
+taxfacts does not provide tax advice and is not a substitute for a qualified tax
+professional. See the Disclaimer and Limitations sections of README.md.
