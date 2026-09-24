@@ -1,3 +1,4 @@
+import { postJson } from './http';
 import type { Answer, AskResult, DecisionBackend, Question } from './types';
 
 const URL = 'https://openrouter.ai/api/v1/chat/completions';
@@ -25,6 +26,72 @@ Never infer a fact from an entity that merely appears nearby - a city named as a
  * which is the approach TypeSafe's own reference adapter takes rather than
  * token logprobs. Runs over OpenRouter so both engines share a network path.
  */
+/** JSON schema asking for one probability per option, per question. */
+export function schemaFor(questions: Record<string, Question>) {
+  const props: Record<string, unknown> = {};
+  const required: string[] = [];
+  for (const [key, q] of Object.entries(questions)) {
+    required.push(key);
+    const options =
+      q.type === 'choice' ? Object.keys(q.criteria) : ['true', 'false'];
+    props[key] = {
+      type: 'object',
+      description: q.instructions,
+      properties: Object.fromEntries(
+        options.map((o) => [
+          o,
+          {
+            type: 'number',
+            description:
+              q.type === 'choice' ? (q.criteria[o] ?? o) : `the answer is ${o}`,
+          },
+        ]),
+      ),
+      required: options,
+      additionalProperties: false,
+    };
+  }
+  return {
+    type: 'object',
+    properties: props,
+    required,
+    additionalProperties: false,
+  };
+}
+
+/** Turns the emitted distributions into our Answer shape. */
+export function answersFrom(
+  raw: Record<string, Record<string, number>>,
+  questions: Record<string, Question>,
+): Record<string, Answer> {
+  const answers: Record<string, Answer> = {};
+  for (const [key, q] of Object.entries(questions)) {
+    const dist = raw[key];
+    if (!dist) continue;
+    if (q.type === 'noul') {
+      answers[key] = { type: 'noul', noul: dist.true ?? 0 };
+      continue;
+    }
+    if (q.type !== 'choice') continue;
+    const entries = Object.entries(dist);
+    const sum = entries.reduce((a, [, p]) => a + p, 0) || 1;
+    const norm = Object.fromEntries(entries.map(([o, p]) => [o, p / sum]));
+    const [choice, pMax] = entries.reduce(
+      (best, [o, p]) => (p > best[1] ? [o, p] : best),
+      ['', -1] as [string, number],
+    );
+    answers[key] = {
+      type: 'choice',
+      choice,
+      probabilities: norm,
+      confidence: confidenceOf(pMax / sum, entries.length),
+    };
+  }
+  return answers;
+}
+
+export { SYSTEM };
+
 export class LlmBackend implements DecisionBackend {
   constructor(
     private readonly apiKey: string,
@@ -37,69 +104,26 @@ export class LlmBackend implements DecisionBackend {
     state: string,
     questions: Record<string, Question>,
   ): Promise<AskResult> {
-    const props: Record<string, unknown> = {};
-    const required: string[] = [];
-    for (const [key, q] of Object.entries(questions)) {
-      required.push(key);
-      const options =
-        q.type === 'choice' ? Object.keys(q.criteria) : ['true', 'false'];
-      props[key] = {
-        type: 'object',
-        description: q.instructions,
-        properties: Object.fromEntries(
-          options.map((o) => [
-            o,
-            {
-              type: 'number',
-              description:
-                q.type === 'choice'
-                  ? (q.criteria[o] ?? o)
-                  : `the answer is ${o}`,
-            },
-          ]),
-        ),
-        required: options,
-        additionalProperties: false,
-      };
-    }
-
-    const res = await fetch(URL, {
-      method: 'POST',
-      headers: {
-        authorization: `Bearer ${this.apiKey}`,
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: this.model,
-        temperature: 0,
-        // A 52-option state question makes the model WRITE 52 numbers. Jev
-        // returns that distribution natively, so this ceiling is a cost the
-        // general-model route pays and the decision-model route does not.
-        max_tokens: 8000,
-        messages: [
-          { role: 'system', content: SYSTEM },
-          { role: 'user', content: state },
-        ],
-        response_format: {
-          type: 'json_schema',
-          json_schema: {
-            name: 'decisions',
-            strict: true,
-            schema: {
-              type: 'object',
-              properties: props,
-              required,
-              additionalProperties: false,
-            },
-          },
+    const res = await postJson(URL, this.apiKey, {
+      model: this.model,
+      temperature: 0,
+      // A 52-option state question makes the model WRITE 52 numbers. Jev
+      // returns that distribution natively, so this ceiling is a cost the
+      // general-model route pays and the decision-model route does not.
+      max_tokens: 8000,
+      messages: [
+        { role: 'system', content: SYSTEM },
+        { role: 'user', content: state },
+      ],
+      response_format: {
+        type: 'json_schema',
+        json_schema: {
+          name: 'decisions',
+          strict: true,
+          schema: schemaFor(questions),
         },
-      }),
+      },
     });
-
-    if (!res.ok)
-      throw new Error(
-        `llm ${res.status}: ${(await res.text().catch(() => '')).slice(0, 200)}`,
-      );
 
     const json = (await res.json()) as {
       choices: { message: { content: string } }[];
@@ -114,29 +138,7 @@ export class LlmBackend implements DecisionBackend {
       return { answers: {}, inputTokens: json.usage?.prompt_tokens ?? 0 };
     }
 
-    const answers: Record<string, Answer> = {};
-    for (const [key, q] of Object.entries(questions)) {
-      const dist = raw[key];
-      if (!dist) continue;
-      if (q.type === 'noul') {
-        answers[key] = { type: 'noul', noul: dist.true ?? 0 };
-        continue;
-      }
-      if (q.type !== 'choice') continue;
-      const entries = Object.entries(dist);
-      const sum = entries.reduce((a, [, p]) => a + p, 0) || 1;
-      const norm = Object.fromEntries(entries.map(([o, p]) => [o, p / sum]));
-      const [choice, pMax] = entries.reduce(
-        (best, [o, p]) => (p > best[1] ? [o, p] : best),
-        ['', -1] as [string, number],
-      );
-      answers[key] = {
-        type: 'choice',
-        choice,
-        probabilities: norm,
-        confidence: confidenceOf(pMax / sum, entries.length),
-      };
-    }
+    const answers = answersFrom(raw, questions);
 
     return {
       answers,

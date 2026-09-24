@@ -5,8 +5,11 @@ every number in the README with no API key and no network:
 
 ```bash
 npx tsx scripts/bench.ts --engine jev
-npx tsx scripts/bench.ts --engine flash-lite
-npx tsx scripts/bench.ts --engine flash
+npx tsx scripts/bench.ts --engine flash-lite     # gemini-2.5-flash-lite
+npx tsx scripts/bench.ts --engine flash          # gemini-2.5-flash
+npx tsx scripts/bench.ts --engine flash-3.8      # gemini-3.8-flash
+npx tsx scripts/bench.ts --engine sonnet-5-direct
+npx tsx scripts/bench.ts --engine opus-5-direct
 ```
 
 To re-measure against the live APIs, `--live --runs 3` and an
@@ -59,15 +62,22 @@ Every case is synthetic. See `fixtures/LICENSE`.
 
 ## What is compared
 
-| engine | what it is |
-|---|---|
-| `typesafe/jev-1.13` | a decision model: returns a probability distribution over a caller-supplied option set, and cannot emit a string |
-| `google/gemini-2.5-flash-lite` | a small general model, asked for the same distributions under a strict JSON schema |
-| `google/gemini-2.5-flash` | a larger general model, identical prompt and schema |
+| engine | lab | route |
+|---|---|---|
+| `typesafe/jev-1.13` | TypeSafe | OpenRouter |
+| `google/gemini-2.5-flash-lite` | Google | OpenRouter |
+| `google/gemini-2.5-flash` | Google | OpenRouter |
+| `google/gemini-3.8-flash` | Google | OpenRouter |
+| `claude-sonnet-5` | Anthropic | direct |
+| `claude-opus-5` | Anthropic | direct |
 
-All three are reached through the same gateway, so network path and billing are
-common. All three receive the same questions, the same option lists and the
-same criteria text.
+Jev is a decision model: it returns a probability distribution over a
+caller-supplied option set and cannot emit a string. The other five are general
+models asked for the same distributions under a strict schema.
+
+All six receive the same questions, the same option lists and the same criteria
+text. **The route is not common**, so latency and cost are not compared - see
+Limitations.
 
 ## Making the comparison fair
 
@@ -91,6 +101,22 @@ threshold would measure that drift rather than the threshold.
 **Three runs per case**, because an early measurement found the same input
 could flip a fact between runs. The `flaky` column counts cases whose fact set
 was not identical across all three.
+
+## Scoring at each engine's own threshold
+
+A single shared threshold measures how well an engine happens to be calibrated
+to that number, not how well it does the task. So the headline table gives each
+engine **the threshold that keeps the most facts** subject to two constraints
+it must satisfy: zero wrong values, and an over-assertion budget stated up
+front.
+
+Two budgets are reported, 3 and 0, because they select different winners and
+publishing only one would be a choice disguised as a measurement.
+
+The full sweep is still printed by the harness, and reading an engine's
+over-assertion column down that sweep is how you tell whether its threshold
+does anything at all. Gemini 2.5 Flash and Flash-Lite are flat across the
+entire range; every other engine moves.
 
 ## The sweep
 
@@ -118,9 +144,24 @@ findings that survive are the large ones: zero versus nine wrong values, three
 versus twelve or twenty-one overreaches, and a threshold that moves one engine
 and not the others.
 
-**Two engines, one family.** Both general models are Gemini. A frontier model
-from another lab may behave differently, and the claim about model class rather
-than scale rests on two points, not a curve.
+**Six engines, three labs**, but one family per lab beyond Gemini. An earlier
+version of this document drew a conclusion about model class from two Gemini
+models; adding a third Gemini and two Anthropic models refuted it. Treat any
+remaining generalisation here the same way.
+
+**Anthropic rejects `temperature`** on these models as deprecated, so those two
+are the only engines not running greedy. That is the likeliest source of the
+run-to-run variance they show, and it means their non-determinism column is not
+strictly comparable with the others.
+
+**Anthropic's schema constrains property keys** to `^[a-zA-Z0-9_.-]{1,64}$`, so
+fact paths are flattened on the wire for those two engines and mapped back
+before scoring. The question text, options and descriptions are unchanged.
+
+**Cost and latency are not compared.** Providers report cost inconsistently -
+Anthropic returns token counts and no price - and two engines call the origin
+while four go through a gateway. Any per-call figure would not be like for
+like, so none is published.
 
 **Verbalized probabilities are not the only option.** Constrained decoding with
 token logprobs might give the general models a better-calibrated signal. If it

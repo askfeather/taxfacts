@@ -1,3 +1,4 @@
+import { postJson } from './http';
 import type { AskResult, DecisionBackend, Question } from './types';
 
 /**
@@ -49,22 +50,11 @@ export class JevBackend implements DecisionBackend {
     state: string,
     questions: Record<string, Question>,
   ): Promise<AskResult> {
-    const res = await fetch(this.url, {
-      method: 'POST',
-      headers: {
-        authorization: `Bearer ${this.apiKey}`,
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({ state, model: this.model, questions }),
+    const res = await postJson(this.url, this.apiKey, {
+      state,
+      model: this.model,
+      questions,
     });
-
-    if (!res.ok) {
-      // Documented codes do not match observed ones: a bad key returns 403
-      // where the spec says 401, and body validation returns 400 for 422.
-      // So branch on the number, never on a documented error name.
-      const body = await res.text().catch(() => '');
-      throw new Error(`jev ${res.status}: ${body.slice(0, 200)}`);
-    }
 
     const json = (await res.json()) as {
       answers: AskResult['answers'];
