@@ -15,6 +15,10 @@ const MAX_BACKOFF_MS = 30_000;
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+/** Wall clock of the last successful call, read by the backends. Retries are
+ *  excluded: a throttled call measures the provider's queue, not the model. */
+export let lastMs = 0;
+
 export async function postJson(
   url: string,
   apiKey: string,
@@ -24,6 +28,7 @@ export async function postJson(
 ): Promise<Response> {
   let wait = 2000;
   for (let attempt = 1; ; attempt++) {
+    const t0 = Date.now();
     const res = await fetch(url, {
       method: 'POST',
       headers: {
@@ -33,7 +38,10 @@ export async function postJson(
       },
       body: JSON.stringify(body),
     });
-    if (res.ok) return res;
+    if (res.ok) {
+      lastMs = Date.now() - t0;
+      return res;
+    }
 
     const text = await res.text().catch(() => '');
     if (!RETRY_ON.has(res.status) || attempt >= MAX_ATTEMPTS) {

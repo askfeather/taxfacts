@@ -1,4 +1,4 @@
-import { postJson } from './http';
+import { lastMs, postJson } from './http';
 import type { AskResult, DecisionBackend, Question } from './types';
 
 /**
@@ -63,6 +63,7 @@ export class JevBackend implements DecisionBackend {
     return {
       answers: json.answers,
       inputTokens: json.usage?.input_tokens ?? 0,
+      ms: lastMs,
       cost: json.usage?.cost,
     };
   }

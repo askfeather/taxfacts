@@ -1,4 +1,4 @@
-import { postJson } from './http';
+import { lastMs, postJson } from './http';
 import type { Answer, AskResult, DecisionBackend, Question } from './types';
 
 const URL = 'https://openrouter.ai/api/v1/chat/completions';
@@ -143,6 +143,7 @@ export class LlmBackend implements DecisionBackend {
     return {
       answers,
       inputTokens: json.usage?.prompt_tokens ?? 0,
+      ms: lastMs,
       cost: json.usage?.cost,
     };
   }

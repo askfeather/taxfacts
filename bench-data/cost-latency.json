@@ -1,0 +1,51 @@
+{
+  "jev": {
+    "perDecision": 3.634e-5,
+    "per1k": 0.0363,
+    "inputTokens": 865,
+    "p50": 301,
+    "p95": 591
+  },
+  "gpt-5-nano": {
+    "perDecision": 5.37e-5,
+    "per1k": 0.0537,
+    "inputTokens": 1074,
+    "p50": 3155,
+    "p95": 3559
+  },
+  "gemini-2.5-flash-lite": {
+    "perDecision": 1.316e-5,
+    "per1k": 0.0132,
+    "inputTokens": 132,
+    "p50": 575,
+    "p95": 1066
+  },
+  "gpt-6-luna": {
+    "perDecision": 0.0001074,
+    "per1k": 0.1074,
+    "inputTokens": 1074,
+    "p50": 2644,
+    "p95": 3388
+  },
+  "gemini-2.5-flash": {
+    "perDecision": 3.951e-5,
+    "per1k": 0.0395,
+    "inputTokens": 132,
+    "p50": 548,
+    "p95": 903
+  },
+  "gemini-3.8-flash": {
+    "perDecision": 0.00136876,
+    "per1k": 1.3688,
+    "inputTokens": 1825,
+    "p50": 2812,
+    "p95": 12204
+  },
+  "claude-haiku-4.5": {
+    "perDecision": 0.00241175,
+    "per1k": 2.4117,
+    "inputTokens": 2412,
+    "p50": 3226,
+    "p95": 3413
+  }
+}

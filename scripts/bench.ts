@@ -39,6 +39,11 @@ const ENGINES: Record<string, string | null> = {
 const DIRECT: Record<string, { env: string; model: string }> = {
   'sonnet-5-direct': { env: 'ANTHROPIC_API_KEY', model: 'claude-sonnet-5' },
   'opus-5-direct': { env: 'ANTHROPIC_API_KEY', model: 'claude-opus-5' },
+  'haiku-direct': { env: 'ANTHROPIC_API_KEY', model: 'claude-haiku-4-5' },
+  // OpenAI's entry in the same tier: gpt-6-luna matches Flash-Lite's price
+  // point, gpt-5-nano is the cheapest thing in the bracket.
+  'luna-direct': { env: 'OPENAI_API_KEY', model: 'gpt-6-luna' },
+  'nano-direct': { env: 'OPENAI_API_KEY', model: 'gpt-5-nano' },
   'astra-direct': { env: 'OPENAI_API_KEY', model: 'gpt-6-astra' },
 };
 const engineArg = process.argv.indexOf('--engine');
@@ -53,6 +58,9 @@ const NAMES: Record<string, string> = {
   'sonnet-5': 'claude-sonnet-5',
   'sonnet-5-direct': 'claude-sonnet-5',
   'opus-5-direct': 'claude-opus-5',
+  'haiku-direct': 'claude-haiku-4.5',
+  'luna-direct': 'gpt-6-luna',
+  'nano-direct': 'gpt-5-nano',
   'astra-direct': 'gpt-6-astra',
 };
 const CACHE = `bench-data/${NAMES[ENGINE] ?? ENGINE}.json`;

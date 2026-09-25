@@ -24,6 +24,9 @@ export interface AskResult {
   inputTokens: number;
   /** Gateways report it; TypeSafe direct does not. */
   cost?: number;
+  /** Wall clock for the call, including network. Not comparable across
+   *  engines reached by different routes - see BENCHMARK.md. */
+  ms?: number;
 }
 
 /**

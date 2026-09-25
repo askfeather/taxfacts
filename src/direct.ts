@@ -1,4 +1,4 @@
-import { postJson } from './http';
+import { lastMs, postJson } from './http';
 import { answersFrom, SYSTEM, schemaFor } from './llm';
 import type { AskResult, DecisionBackend, Question } from './types';
 
@@ -84,12 +84,23 @@ export class AnthropicBackend implements DecisionBackend {
     return {
       answers: answersFrom(raw, questions),
       inputTokens: json.usage?.input_tokens ?? 0,
+      ms: lastMs,
     };
   }
 }
 
 /** OpenAI supports json_schema directly, so this is the same body shape the
  *  gateway route uses, pointed at the origin. */
+/**
+ * The lowest reasoning setting each model accepts. They disagree on the
+ * vocabulary for the same idea: gpt-6-luna rejects 'minimal' and wants 'none',
+ * gpt-5-nano rejects 'none' and wants 'minimal'.
+ */
+const NO_REASONING: Record<string, string> = {
+  'gpt-6-luna': 'none',
+  'gpt-5-nano': 'minimal',
+};
+
 export class OpenAiBackend implements DecisionBackend {
   constructor(
     private readonly apiKey: string,
@@ -108,6 +119,14 @@ export class OpenAiBackend implements DecisionBackend {
       {
         model: this.model,
         max_completion_tokens: MAX_TOKENS,
+        // Non-thinking, the convention every published comparison in this
+        // space uses for its baseline. Left at the default these models reason
+        // for 6-30s on a 52-option schema, where no other engine here reasons
+        // at all, so the default would compare two different things. Note
+        // gpt-6-luna rejects 'minimal' and wants 'none'.
+        ...(NO_REASONING[this.model]
+          ? { reasoning_effort: NO_REASONING[this.model] }
+          : {}),
         messages: [
           { role: 'system', content: SYSTEM },
           { role: 'user', content: state },
@@ -139,6 +158,7 @@ export class OpenAiBackend implements DecisionBackend {
     return {
       answers: answersFrom(raw, questions),
       inputTokens: json.usage?.prompt_tokens ?? 0,
+      ms: lastMs,
     };
   }
 }
