@@ -87,8 +87,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 1025,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -177,8 +178,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.00028561
+      "inputTokens": 124,
+      "ms": 604,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -267,279 +269,8 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.00028561
-    }
-  ],
-  "a-blind-negated-spouse": [
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfj",
-          "probabilities": {
-            "single": 0,
-            "mfj": 1,
-            "mfs": 0,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "WI",
-          "probabilities": {
-            "not_stated": 0,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 0,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 1,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
       "inputTokens": 124,
-      "cost": 0.0002948
-    },
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfj",
-          "probabilities": {
-            "single": 0,
-            "mfj": 1,
-            "mfs": 0,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "WI",
-          "probabilities": {
-            "not_stated": 0,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 0,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 1,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 124,
-      "cost": 0.0002948
-    },
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfj",
-          "probabilities": {
-            "single": 0,
-            "mfj": 1,
-            "mfs": 0,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "WI",
-          "probabilities": {
-            "not_stated": 0,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 0,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 1,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 124,
+      "ms": 522,
       "cost": 0.0002948
     }
   ],
@@ -631,8 +362,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 1025,
+      "cost": 0.0002939
     },
     {
       "answers": {
@@ -721,8 +453,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.00028543
+      "inputTokens": 115,
+      "ms": 604,
+      "cost": 0.0002939
     },
     {
       "answers": {
@@ -811,8 +544,284 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 522,
+      "cost": 0.0002939
+    }
+  ],
+  "a-blind-negated-spouse": [
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfj",
+          "probabilities": {
+            "single": 0,
+            "mfj": 1,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "WI",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 1,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 116,
+      "ms": 1025,
+      "cost": 0.000294
+    },
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfj",
+          "probabilities": {
+            "single": 0,
+            "mfj": 1,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "WI",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 1,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 116,
+      "ms": 604,
+      "cost": 0.000294
+    },
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfj",
+          "probabilities": {
+            "single": 0,
+            "mfj": 1,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "WI",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 1,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 116,
+      "ms": 522,
+      "cost": 0.000294
     }
   ],
   "a-dc-resident": [
@@ -903,8 +912,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 608,
+      "cost": 0.0002939
     },
     {
       "answers": {
@@ -993,8 +1003,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 584,
+      "cost": 0.00028517
     },
     {
       "answers": {
@@ -1083,8 +1094,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.00028543
+      "inputTokens": 115,
+      "ms": 404,
+      "cost": 0.0002939
     }
   ],
   "a-hoh-after-divorce": [
@@ -1175,8 +1187,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 140,
-      "cost": 0.0002964
+      "inputTokens": 132,
+      "ms": 608,
+      "cost": 0.0002956
     },
     {
       "answers": {
@@ -1265,8 +1278,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 140,
-      "cost": 0.0002964
+      "inputTokens": 132,
+      "ms": 584,
+      "cost": 0.0002956
     },
     {
       "answers": {
@@ -1355,8 +1369,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 140,
-      "cost": 0.0002964
+      "inputTokens": 132,
+      "ms": 404,
+      "cost": 0.00028561
     }
   ],
   "a-hoh-parent": [
@@ -1447,8 +1462,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 142,
-      "cost": 0.0002966
+      "inputTokens": 134,
+      "ms": 608,
+      "cost": 0.0002958
     },
     {
       "answers": {
@@ -1537,8 +1553,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 142,
-      "cost": 0.00028598
+      "inputTokens": 134,
+      "ms": 584,
+      "cost": 0.0002958
     },
     {
       "answers": {
@@ -1627,8 +1644,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 142,
-      "cost": 0.0002966
+      "inputTokens": 134,
+      "ms": 404,
+      "cost": 0.00028572
     }
   ],
   "a-long-but-clear": [
@@ -1661,7 +1679,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OH",
+          "choice": "CO",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -1669,7 +1687,7 @@
             "AZ": 0,
             "AR": 0,
             "CA": 0,
-            "CO": 0,
+            "CO": 1,
             "CT": 0,
             "DE": 0,
             "DC": 0,
@@ -1699,7 +1717,7 @@
             "NY": 0,
             "NC": 0,
             "ND": 0,
-            "OH": 1,
+            "OH": 0,
             "OK": 0,
             "OR": 0,
             "PA": 0,
@@ -1719,8 +1737,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 173,
-      "cost": 0.0002997
+      "inputTokens": 165,
+      "ms": 465,
+      "cost": 0.0002989
     },
     {
       "answers": {
@@ -1751,7 +1770,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OH",
+          "choice": "CO",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -1759,7 +1778,7 @@
             "AZ": 0,
             "AR": 0,
             "CA": 0,
-            "CO": 0,
+            "CO": 1,
             "CT": 0,
             "DE": 0,
             "DC": 0,
@@ -1789,7 +1808,7 @@
             "NY": 0,
             "NC": 0,
             "ND": 0,
-            "OH": 1,
+            "OH": 0,
             "OK": 0,
             "OR": 0,
             "PA": 0,
@@ -1809,8 +1828,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 173,
-      "cost": 0.0002997
+      "inputTokens": 165,
+      "ms": 508,
+      "cost": 0.00028666
     },
     {
       "answers": {
@@ -1841,7 +1861,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OH",
+          "choice": "CO",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -1849,7 +1869,7 @@
             "AZ": 0,
             "AR": 0,
             "CA": 0,
-            "CO": 0,
+            "CO": 1,
             "CT": 0,
             "DE": 0,
             "DC": 0,
@@ -1879,7 +1899,7 @@
             "NY": 0,
             "NC": 0,
             "ND": 0,
-            "OH": 1,
+            "OH": 0,
             "OK": 0,
             "OR": 0,
             "PA": 0,
@@ -1899,8 +1919,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 173,
-      "cost": 0.0002997
+      "inputTokens": 165,
+      "ms": 425,
+      "cost": 0.0002989
     }
   ],
   "a-plain-mfs-reason": [
@@ -1991,8 +2012,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 129,
-      "cost": 0.0002953
+      "inputTokens": 121,
+      "ms": 448,
+      "cost": 0.0002945
     },
     {
       "answers": {
@@ -2081,8 +2103,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 129,
-      "cost": 0.0002953
+      "inputTokens": 121,
+      "ms": 508,
+      "cost": 0.00028532
     },
     {
       "answers": {
@@ -2171,8 +2194,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 129,
-      "cost": 0.00028558
+      "inputTokens": 121,
+      "ms": 425,
+      "cost": 0.00028532
     }
   ],
   "a-qss-explicit": [
@@ -2263,8 +2287,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 149,
-      "cost": 0.0002973
+      "inputTokens": 141,
+      "ms": 465,
+      "cost": 0.0002965
     },
     {
       "answers": {
@@ -2353,8 +2378,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 149,
-      "cost": 0.0002973
+      "inputTokens": 141,
+      "ms": 508,
+      "cost": 0.0002965
     },
     {
       "answers": {
@@ -2443,280 +2469,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 149,
-      "cost": 0.00028614
-    }
-  ],
-  "a-separated-not-divorced": [
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfs",
-          "probabilities": {
-            "single": 0,
-            "mfj": 0,
-            "mfs": 1,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "not_stated",
-          "probabilities": {
-            "not_stated": 1,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 0,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 0,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 136,
-      "cost": 0.000296
-    },
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfs",
-          "probabilities": {
-            "single": 0,
-            "mfj": 0,
-            "mfs": 1,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "not_stated",
-          "probabilities": {
-            "not_stated": 1,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 0,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 0,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 136,
-      "cost": 0.00028574
-    },
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfs",
-          "probabilities": {
-            "single": 0,
-            "mfj": 0,
-            "mfs": 1,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "not_stated",
-          "probabilities": {
-            "not_stated": 1,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 0,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 0,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 136,
-      "cost": 0.00028574
+      "inputTokens": 141,
+      "ms": 425,
+      "cost": 0.00028588
     }
   ],
   "a-single-never-married": [
@@ -2807,8 +2562,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 502,
+      "cost": 0.0002939
     },
     {
       "answers": {
@@ -2897,8 +2653,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 432,
+      "cost": 0.00028517
     },
     {
       "answers": {
@@ -2987,14 +2744,377 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 469,
+      "cost": 0.0002939
+    }
+  ],
+  "a-separated-not-divorced": [
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfs",
+          "probabilities": {
+            "single": 0,
+            "mfj": 0,
+            "mfs": 1,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "not_stated",
+          "probabilities": {
+            "not_stated": 1,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 128,
+      "ms": 502,
+      "cost": 0.0002952
+    },
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfs",
+          "probabilities": {
+            "single": 0,
+            "mfj": 0,
+            "mfs": 1,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "not_stated",
+          "probabilities": {
+            "not_stated": 1,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 128,
+      "ms": 432,
+      "cost": 0.0002952
+    },
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfs",
+          "probabilities": {
+            "single": 0,
+            "mfj": 0,
+            "mfs": 1,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "not_stated",
+          "probabilities": {
+            "not_stated": 1,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 128,
+      "ms": 469,
+      "cost": 0.00028557
     }
   ],
   "a-ssn-with-dashes": [
     {
-      "answers": {},
-      "inputTokens": 0
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "single",
+          "probabilities": {
+            "single": 1,
+            "mfj": 0,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "OR",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 1,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 134,
+      "ms": 502,
+      "cost": 0.0002958
     },
     {
       "answers": {
@@ -3083,8 +3203,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 142,
-      "cost": 0.0002966
+      "inputTokens": 134,
+      "ms": 432,
+      "cost": 0.0002958
     },
     {
       "answers": {
@@ -3173,8 +3294,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 142,
-      "cost": 0.00028598
+      "inputTokens": 134,
+      "ms": 469,
+      "cost": 0.00028572
     }
   ],
   "a-state-abbrev-inline": [
@@ -3265,8 +3387,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 126,
-      "cost": 0.000295
+      "inputTokens": 118,
+      "ms": 504,
+      "cost": 0.0002942
     },
     {
       "answers": {
@@ -3355,8 +3478,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 126,
-      "cost": 0.00028546
+      "inputTokens": 118,
+      "ms": 384,
+      "cost": 0.00028529
     },
     {
       "answers": {
@@ -3445,8 +3569,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 126,
-      "cost": 0.00028546
+      "inputTokens": 118,
+      "ms": 389,
+      "cost": 0.0002942
     }
   ],
   "a-state-capital": [
@@ -3479,7 +3604,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "ID",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -3494,7 +3619,7 @@
             "FL": 0,
             "GA": 0,
             "HI": 0,
-            "ID": 0,
+            "ID": 1,
             "IL": 0,
             "IN": 0,
             "IA": 0,
@@ -3534,11 +3659,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 0
+          "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.0002948
+      "inputTokens": 116,
+      "ms": 504,
+      "cost": 0.000294
     },
     {
       "answers": {
@@ -3569,7 +3695,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "ID",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -3584,7 +3710,7 @@
             "FL": 0,
             "GA": 0,
             "HI": 0,
-            "ID": 0,
+            "ID": 1,
             "IL": 0,
             "IN": 0,
             "IA": 0,
@@ -3624,11 +3750,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 0
+          "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.0002948
+      "inputTokens": 116,
+      "ms": 384,
+      "cost": 0.000294
     },
     {
       "answers": {
@@ -3659,7 +3786,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "ID",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -3674,7 +3801,7 @@
             "FL": 0,
             "GA": 0,
             "HI": 0,
-            "ID": 0,
+            "ID": 1,
             "IL": 0,
             "IN": 0,
             "IA": 0,
@@ -3714,11 +3841,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 0
+          "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.00028544
+      "inputTokens": 116,
+      "ms": 389,
+      "cost": 0.000294
     }
   ],
   "a-widow-remarried": [
@@ -3809,8 +3937,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 145,
-      "cost": 0.0002969
+      "inputTokens": 137,
+      "ms": 504,
+      "cost": 0.0002961
     },
     {
       "answers": {
@@ -3899,8 +4028,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 145,
-      "cost": 0.00028601
+      "inputTokens": 137,
+      "ms": 384,
+      "cost": 0.0002961
     },
     {
       "answers": {
@@ -3989,100 +4119,15 @@
           "confidence": 1
         }
       },
-      "inputTokens": 145,
-      "cost": 0.00028601
+      "inputTokens": 137,
+      "ms": 389,
+      "cost": 0.00028575
     }
   ],
   "age-indirect": [
     {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfj",
-          "probabilities": {
-            "single": 0,
-            "mfj": 1,
-            "mfs": 0,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "not_stated",
-          "probabilities": {
-            "not_stated": 1,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 0,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 0,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 130,
-      "cost": 0.0002954
+      "answers": {},
+      "inputTokens": 0
     },
     {
       "answers": {
@@ -4171,8 +4216,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 130,
-      "cost": 0.00028559
+      "inputTokens": 122,
+      "ms": 417,
+      "cost": 0.0002946
     },
     {
       "answers": {
@@ -4261,8 +4307,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 130,
-      "cost": 0.00028559
+      "inputTokens": 122,
+      "ms": 413,
+      "cost": 0.0002946
     }
   ],
   "b-blind-metaphor": [
@@ -4353,8 +4400,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 504,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -4443,8 +4491,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002856
+      "inputTokens": 123,
+      "ms": 417,
+      "cost": 0.00028543
     },
     {
       "answers": {
@@ -4533,8 +4582,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 413,
+      "cost": 0.0002947
     }
   ],
   "b-client-not-filer": [
@@ -4625,8 +4675,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 504,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -4715,8 +4766,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 417,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -4805,8 +4857,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.00028561
+      "inputTokens": 124,
+      "ms": 413,
+      "cost": 0.00028544
     }
   ],
   "b-deceased-spouse-blind": [
@@ -4839,13 +4892,13 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OK",
+          "choice": "AR",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
             "AK": 0,
             "AZ": 0,
-            "AR": 0,
+            "AR": 1,
             "CA": 0,
             "CO": 0,
             "CT": 0,
@@ -4878,7 +4931,7 @@
             "NC": 0,
             "ND": 0,
             "OH": 0,
-            "OK": 1,
+            "OK": 0,
             "OR": 0,
             "PA": 0,
             "RI": 0,
@@ -4897,8 +4950,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 128,
-      "cost": 0.0002952
+      "inputTokens": 120,
+      "ms": 469,
+      "cost": 0.0002944
     },
     {
       "answers": {
@@ -4929,13 +4983,13 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OK",
+          "choice": "AR",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
             "AK": 0,
             "AZ": 0,
-            "AR": 0,
+            "AR": 1,
             "CA": 0,
             "CO": 0,
             "CT": 0,
@@ -4968,7 +5022,7 @@
             "NC": 0,
             "ND": 0,
             "OH": 0,
-            "OK": 1,
+            "OK": 0,
             "OR": 0,
             "PA": 0,
             "RI": 0,
@@ -4987,8 +5041,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 128,
-      "cost": 0.0002952
+      "inputTokens": 120,
+      "ms": 488,
+      "cost": 0.0002944
     },
     {
       "answers": {
@@ -5019,13 +5074,13 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OK",
+          "choice": "AR",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
             "AK": 0,
             "AZ": 0,
-            "AR": 0,
+            "AR": 1,
             "CA": 0,
             "CO": 0,
             "CT": 0,
@@ -5058,7 +5113,7 @@
             "NC": 0,
             "ND": 0,
             "OH": 0,
-            "OK": 1,
+            "OK": 0,
             "OR": 0,
             "PA": 0,
             "RI": 0,
@@ -5077,8 +5132,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 128,
-      "cost": 0.00028557
+      "inputTokens": 120,
+      "ms": 504,
+      "cost": 0.00028531
     }
   ],
   "b-ein-not-ssn": [
@@ -5169,8 +5225,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 469,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -5259,8 +5316,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 488,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -5349,8 +5407,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.00028561
+      "inputTokens": 124,
+      "ms": 504,
+      "cost": 0.0002948
     }
   ],
   "b-employer-state": [
@@ -5383,7 +5442,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "TX",
+          "choice": "not_stated",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -5429,7 +5488,7 @@
             "SC": 0,
             "SD": 0,
             "TN": 0,
-            "TX": 1,
+            "TX": 0,
             "UT": 0,
             "VT": 0,
             "VA": 0,
@@ -5438,11 +5497,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 1
+          "confidence": 0
         }
       },
-      "inputTokens": 135,
-      "cost": 0.0002959
+      "inputTokens": 127,
+      "ms": 469,
+      "cost": 0.0002951
     },
     {
       "answers": {
@@ -5473,7 +5533,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "TX",
+          "choice": "not_stated",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -5519,7 +5579,7 @@
             "SC": 0,
             "SD": 0,
             "TN": 0,
-            "TX": 1,
+            "TX": 0,
             "UT": 0,
             "VT": 0,
             "VA": 0,
@@ -5528,11 +5588,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 1
+          "confidence": 0
         }
       },
-      "inputTokens": 135,
-      "cost": 0.0002959
+      "inputTokens": 127,
+      "ms": 488,
+      "cost": 0.0002951
     },
     {
       "answers": {
@@ -5563,7 +5624,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "TX",
+          "choice": "not_stated",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -5609,7 +5670,7 @@
             "SC": 0,
             "SD": 0,
             "TN": 0,
-            "TX": 1,
+            "TX": 0,
             "UT": 0,
             "VT": 0,
             "VA": 0,
@@ -5618,21 +5679,105 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 1
+          "confidence": 0
         }
       },
-      "inputTokens": 135,
-      "cost": 0.0002959
+      "inputTokens": 127,
+      "ms": 504,
+      "cost": 0.00028547
     }
   ],
   "b-future-age": [
     {
-      "answers": {},
-      "inputTokens": 0
-    },
-    {
-      "answers": {},
-      "inputTokens": 0
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfj",
+          "probabilities": {
+            "single": 0,
+            "mfj": 1,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "CT",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 1,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 116,
+      "ms": 425,
+      "cost": 0.000294
     },
     {
       "answers": {
@@ -5721,8 +5866,100 @@
           "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.0002948
+      "inputTokens": 116,
+      "ms": 581,
+      "cost": 0.00028518
+    },
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfj",
+          "probabilities": {
+            "single": 0,
+            "mfj": 1,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "CT",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 1,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 116,
+      "ms": 438,
+      "cost": 0.000294
     }
   ],
   "b-hypothetical": [
@@ -5813,8 +6050,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 425,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -5903,8 +6141,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 440,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -5993,8 +6232,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002856
+      "inputTokens": 123,
+      "ms": 453,
+      "cost": 0.00028543
     }
   ],
   "b-phone-not-zip": [
@@ -6027,7 +6267,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "CO",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -6035,7 +6275,7 @@
             "AZ": 0,
             "AR": 0,
             "CA": 0,
-            "CO": 0,
+            "CO": 1,
             "CT": 0,
             "DE": 0,
             "DC": 0,
@@ -6082,11 +6322,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 0
+          "confidence": 1
         }
       },
-      "inputTokens": 135,
-      "cost": 0.0002959
+      "inputTokens": 127,
+      "ms": 425,
+      "cost": 0.0002951
     },
     {
       "answers": {
@@ -6117,7 +6358,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "CO",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -6125,7 +6366,7 @@
             "AZ": 0,
             "AR": 0,
             "CA": 0,
-            "CO": 0,
+            "CO": 1,
             "CT": 0,
             "DE": 0,
             "DC": 0,
@@ -6172,11 +6413,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 0
+          "confidence": 1
         }
       },
-      "inputTokens": 135,
-      "cost": 0.0002959
+      "inputTokens": 127,
+      "ms": 581,
+      "cost": 0.0002951
     },
     {
       "answers": {
@@ -6207,7 +6449,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "CO",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -6215,7 +6457,7 @@
             "AZ": 0,
             "AR": 0,
             "CA": 0,
-            "CO": 0,
+            "CO": 1,
             "CT": 0,
             "DE": 0,
             "DC": 0,
@@ -6262,17 +6504,105 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 0
+          "confidence": 1
         }
       },
-      "inputTokens": 135,
-      "cost": 0.00028573
+      "inputTokens": 127,
+      "ms": 453,
+      "cost": 0.0002951
     }
   ],
   "b-prior-year-status": [
     {
-      "answers": {},
-      "inputTokens": 0
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "not_stated",
+          "probabilities": {
+            "single": 0,
+            "mfj": 0,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 1
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "not_stated",
+          "probabilities": {
+            "not_stated": 1,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 141,
+      "ms": 629,
+      "cost": 0.0002965
     },
     {
       "answers": {
@@ -6361,8 +6691,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 149,
-      "cost": 0.00028614
+      "inputTokens": 141,
+      "ms": 347,
+      "cost": 0.0002965
     },
     {
       "answers": {
@@ -6451,8 +6782,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 149,
-      "cost": 0.0002973
+      "inputTokens": 141,
+      "ms": 383,
+      "cost": 0.00028588
     }
   ],
   "b-spouse-age-only": [
@@ -6485,7 +6817,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OR",
+          "choice": "OK",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -6524,8 +6856,8 @@
             "NC": 0,
             "ND": 0,
             "OH": 0,
-            "OK": 0,
-            "OR": 1,
+            "OK": 1,
+            "OR": 0,
             "PA": 0,
             "RI": 0,
             "SC": 0,
@@ -6543,8 +6875,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.0002945
+      "inputTokens": 113,
+      "ms": 474,
+      "cost": 0.0002937
     },
     {
       "answers": {
@@ -6575,7 +6908,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OR",
+          "choice": "OK",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -6614,8 +6947,8 @@
             "NC": 0,
             "ND": 0,
             "OH": 0,
-            "OK": 0,
-            "OR": 1,
+            "OK": 1,
+            "OR": 0,
             "PA": 0,
             "RI": 0,
             "SC": 0,
@@ -6633,8 +6966,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.00028532
+      "inputTokens": 113,
+      "ms": 347,
+      "cost": 0.00028515
     },
     {
       "answers": {
@@ -6665,7 +6999,7 @@
         },
         "/filer/address/state": {
           "type": "choice",
-          "choice": "OR",
+          "choice": "OK",
           "probabilities": {
             "not_stated": 0,
             "AL": 0,
@@ -6704,8 +7038,8 @@
             "NC": 0,
             "ND": 0,
             "OH": 0,
-            "OK": 0,
-            "OR": 1,
+            "OK": 1,
+            "OR": 0,
             "PA": 0,
             "RI": 0,
             "SC": 0,
@@ -6723,8 +7057,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.0002945
+      "inputTokens": 113,
+      "ms": 383,
+      "cost": 0.00028515
     }
   ],
   "b-third-party-age": [
@@ -6815,8 +7150,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 136,
-      "cost": 0.000296
+      "inputTokens": 128,
+      "ms": 474,
+      "cost": 0.0002952
     },
     {
       "answers": {
@@ -6905,8 +7241,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 136,
-      "cost": 0.00028574
+      "inputTokens": 128,
+      "ms": 548,
+      "cost": 0.00028557
     },
     {
       "answers": {
@@ -6995,8 +7332,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 136,
-      "cost": 0.00028574
+      "inputTokens": 128,
+      "ms": 383,
+      "cost": 0.00028557
     }
   ],
   "b-third-party-state": [
@@ -7087,8 +7425,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 134,
-      "cost": 0.0002958
+      "inputTokens": 126,
+      "ms": 588,
+      "cost": 0.000295
     },
     {
       "answers": {
@@ -7177,8 +7516,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 134,
-      "cost": 0.00028572
+      "inputTokens": 126,
+      "ms": 474,
+      "cost": 0.00028546
     },
     {
       "answers": {
@@ -7267,8 +7607,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 134,
-      "cost": 0.0002958
+      "inputTokens": 126,
+      "ms": 465,
+      "cost": 0.000295
     }
   ],
   "b-two-cities-one-home": [
@@ -7359,8 +7700,9 @@
           "confidence": 0
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 588,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -7449,8 +7791,9 @@
           "confidence": 0
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 474,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -7539,8 +7882,9 @@
           "confidence": 0
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 465,
+      "cost": 0.00028544
     }
   ],
   "blind-filer": [
@@ -7631,8 +7975,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 383,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -7721,8 +8066,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002856
+      "inputTokens": 123,
+      "ms": 336,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -7811,280 +8157,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002856
-    }
-  ],
-  "blind-spouse": [
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfj",
-          "probabilities": {
-            "single": 0,
-            "mfj": 1,
-            "mfs": 0,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "IL",
-          "probabilities": {
-            "not_stated": 0,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 1,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 0,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 124,
-      "cost": 0.0002948
-    },
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfj",
-          "probabilities": {
-            "single": 0,
-            "mfj": 1,
-            "mfs": 0,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "IL",
-          "probabilities": {
-            "not_stated": 0,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 1,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 0,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 124,
-      "cost": 0.00028544
-    },
-    {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "mfj",
-          "probabilities": {
-            "single": 0,
-            "mfj": 1,
-            "mfs": 0,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "IL",
-          "probabilities": {
-            "not_stated": 0,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 1,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 0,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 0,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 124,
-      "cost": 0.00028544
+      "inputTokens": 123,
+      "ms": 445,
+      "cost": 0.00028543
     }
   ],
   "c-age-not-mentioned": [
@@ -8175,8 +8250,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 118,
-      "cost": 0.0002942
+      "inputTokens": 110,
+      "ms": 504,
+      "cost": 0.0002934
     },
     {
       "answers": {
@@ -8265,8 +8341,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 118,
-      "cost": 0.00028529
+      "inputTokens": 110,
+      "ms": 1433,
+      "cost": 0.0002934
     },
     {
       "answers": {
@@ -8355,8 +8432,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 118,
-      "cost": 0.00028529
+      "inputTokens": 110,
+      "ms": 543,
+      "cost": 0.0002934
     }
   ],
   "c-married-no-method": [
@@ -8447,8 +8525,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 125,
-      "cost": 0.0002949
+      "inputTokens": 117,
+      "ms": 504,
+      "cost": 0.0002941
     },
     {
       "answers": {
@@ -8537,8 +8616,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 125,
-      "cost": 0.0002949
+      "inputTokens": 117,
+      "ms": 427,
+      "cost": 0.0002941
     },
     {
       "answers": {
@@ -8627,8 +8707,284 @@
           "confidence": 1
         }
       },
-      "inputTokens": 125,
-      "cost": 0.0002949
+      "inputTokens": 117,
+      "ms": 529,
+      "cost": 0.0002941
+    }
+  ],
+  "blind-spouse": [
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfj",
+          "probabilities": {
+            "single": 0,
+            "mfj": 1,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "IL",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 1,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 116,
+      "ms": 504,
+      "cost": 0.000294
+    },
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfj",
+          "probabilities": {
+            "single": 0,
+            "mfj": 1,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "IL",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 1,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 116,
+      "ms": 543,
+      "cost": 0.000294
+    },
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "mfj",
+          "probabilities": {
+            "single": 0,
+            "mfj": 1,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 0
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "IL",
+          "probabilities": {
+            "not_stated": 0,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 1,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 116,
+      "ms": 433,
+      "cost": 0.00028518
     }
   ],
   "c-maybe-hoh": [
@@ -8719,8 +9075,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 433,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -8809,8 +9166,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 558,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -8899,8 +9257,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.00028561
+      "inputTokens": 124,
+      "ms": 355,
+      "cost": 0.00028544
     }
   ],
   "c-moving-soon": [
@@ -8991,8 +9350,9 @@
           "confidence": 0
         }
       },
-      "inputTokens": 128,
-      "cost": 0.0002952
+      "inputTokens": 120,
+      "ms": 452,
+      "cost": 0.0002944
     },
     {
       "answers": {
@@ -9081,8 +9441,9 @@
           "confidence": 0
         }
       },
-      "inputTokens": 128,
-      "cost": 0.0002952
+      "inputTokens": 120,
+      "ms": 431,
+      "cost": 0.0002944
     },
     {
       "answers": {
@@ -9171,8 +9532,9 @@
           "confidence": 0
         }
       },
-      "inputTokens": 128,
-      "cost": 0.0002952
+      "inputTokens": 120,
+      "ms": 411,
+      "cost": 0.00028531
     }
   ],
   "c-portland-ambiguous": [
@@ -9263,8 +9625,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 119,
-      "cost": 0.0002943
+      "inputTokens": 111,
+      "ms": 558,
+      "cost": 0.0002935
     },
     {
       "answers": {
@@ -9353,8 +9716,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 119,
-      "cost": 0.0002853
+      "inputTokens": 111,
+      "ms": 355,
+      "cost": 0.0002935
     },
     {
       "answers": {
@@ -9443,8 +9807,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 119,
-      "cost": 0.0002853
+      "inputTokens": 111,
+      "ms": 419,
+      "cost": 0.00028504
     }
   ],
   "c-separated-undecided": [
@@ -9535,8 +9900,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 419,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -9625,8 +9991,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 504,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -9715,8 +10082,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 456,
+      "cost": 0.00028543
     }
   ],
   "c-state-not-mentioned": [
@@ -9807,8 +10175,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.0002945
+      "inputTokens": 113,
+      "ms": 553,
+      "cost": 0.0002937
     },
     {
       "answers": {
@@ -9897,8 +10266,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.00028532
+      "inputTokens": 113,
+      "ms": 428,
+      "cost": 0.0002937
     },
     {
       "answers": {
@@ -9987,8 +10357,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.00028532
+      "inputTokens": 113,
+      "ms": 517,
+      "cost": 0.00028515
     }
   ],
   "c-vision-unclear": [
@@ -10079,8 +10450,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 125,
-      "cost": 0.0002949
+      "inputTokens": 117,
+      "ms": 504,
+      "cost": 0.0002941
     },
     {
       "answers": {
@@ -10169,8 +10541,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 125,
-      "cost": 0.0002949
+      "inputTokens": 117,
+      "ms": 456,
+      "cost": 0.0002941
     },
     {
       "answers": {
@@ -10259,8 +10632,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 125,
-      "cost": 0.0002949
+      "inputTokens": 117,
+      "ms": 442,
+      "cost": 0.0002941
     }
   ],
   "contradiction": [
@@ -10351,8 +10725,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 133,
-      "cost": 0.0002957
+      "inputTokens": 125,
+      "ms": 442,
+      "cost": 0.0002949
     },
     {
       "answers": {
@@ -10441,8 +10816,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 133,
-      "cost": 0.0002957
+      "inputTokens": 125,
+      "ms": 411,
+      "cost": 0.0002949
     },
     {
       "answers": {
@@ -10531,8 +10907,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 133,
-      "cost": 0.0002957
+      "inputTokens": 125,
+      "ms": 487,
+      "cost": 0.00028545
     }
   ],
   "d-corporate-tax": [
@@ -10623,12 +11000,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 126,
-      "cost": 0.000295
-    },
-    {
-      "answers": {},
-      "inputTokens": 0
+      "inputTokens": 118,
+      "ms": 520,
+      "cost": 0.0002942
     },
     {
       "answers": {
@@ -10717,8 +11091,100 @@
           "confidence": 1
         }
       },
-      "inputTokens": 126,
-      "cost": 0.000295
+      "inputTokens": 118,
+      "ms": 517,
+      "cost": 0.00028529
+    },
+    {
+      "answers": {
+        "__in_domain": {
+          "type": "noul",
+          "noul": 1
+        },
+        "/filer/filingStatus": {
+          "type": "choice",
+          "choice": "not_stated",
+          "probabilities": {
+            "single": 0,
+            "mfj": 0,
+            "mfs": 0,
+            "hoh": 0,
+            "qss": 0,
+            "not_stated": 1
+          },
+          "confidence": 1
+        },
+        "/filer/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/spouse/blind": {
+          "type": "noul",
+          "noul": 0
+        },
+        "/filer/address/state": {
+          "type": "choice",
+          "choice": "not_stated",
+          "probabilities": {
+            "not_stated": 1,
+            "AL": 0,
+            "AK": 0,
+            "AZ": 0,
+            "AR": 0,
+            "CA": 0,
+            "CO": 0,
+            "CT": 0,
+            "DE": 0,
+            "DC": 0,
+            "FL": 0,
+            "GA": 0,
+            "HI": 0,
+            "ID": 0,
+            "IL": 0,
+            "IN": 0,
+            "IA": 0,
+            "KS": 0,
+            "KY": 0,
+            "LA": 0,
+            "ME": 0,
+            "MD": 0,
+            "MA": 0,
+            "MI": 0,
+            "MN": 0,
+            "MS": 0,
+            "MO": 0,
+            "MT": 0,
+            "NE": 0,
+            "NV": 0,
+            "NH": 0,
+            "NJ": 0,
+            "NM": 0,
+            "NY": 0,
+            "NC": 0,
+            "ND": 0,
+            "OH": 0,
+            "OK": 0,
+            "OR": 0,
+            "PA": 0,
+            "RI": 0,
+            "SC": 0,
+            "SD": 0,
+            "TN": 0,
+            "TX": 0,
+            "UT": 0,
+            "VT": 0,
+            "VA": 0,
+            "WA": 0,
+            "WV": 0,
+            "WI": 0,
+            "WY": 0
+          },
+          "confidence": 1
+        }
+      },
+      "inputTokens": 118,
+      "ms": 447,
+      "cost": 0.0002942
     }
   ],
   "d-instruction-injection": [
@@ -10809,8 +11275,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 411,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -10899,8 +11366,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 487,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -10989,8 +11457,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002856
+      "inputTokens": 123,
+      "ms": 458,
+      "cost": 0.0002947
     }
   ],
   "d-sports-report": [
@@ -11081,8 +11550,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 130,
-      "cost": 0.0002954
+      "inputTokens": 122,
+      "ms": 458,
+      "cost": 0.0002946
     },
     {
       "answers": {
@@ -11171,8 +11641,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 130,
-      "cost": 0.00028559
+      "inputTokens": 122,
+      "ms": 477,
+      "cost": 0.0002946
     },
     {
       "answers": {
@@ -11261,8 +11732,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 130,
-      "cost": 0.00028559
+      "inputTokens": 122,
+      "ms": 539,
+      "cost": 0.00028533
     }
   ],
   "hoh": [
@@ -11353,8 +11825,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 486,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -11443,8 +11916,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 444,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -11533,8 +12007,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002856
+      "inputTokens": 123,
+      "ms": 397,
+      "cost": 0.0002947
     }
   ],
   "long-narrative-distractors": [
@@ -11625,8 +12100,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 182,
-      "cost": 0.0003006
+      "inputTokens": 174,
+      "ms": 477,
+      "cost": 0.0002998
     },
     {
       "answers": {
@@ -11715,8 +12191,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 182,
-      "cost": 0.0003006
+      "inputTokens": 174,
+      "ms": 539,
+      "cost": 0.0002998
     },
     {
       "answers": {
@@ -11805,8 +12282,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 182,
-      "cost": 0.0002871
+      "inputTokens": 174,
+      "ms": 424,
+      "cost": 0.00028693
     }
   ],
   "married-status-ambiguous": [
@@ -11897,8 +12375,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 126,
-      "cost": 0.000295
+      "inputTokens": 118,
+      "ms": 424,
+      "cost": 0.0002942
     },
     {
       "answers": {
@@ -11987,8 +12466,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 126,
-      "cost": 0.00028546
+      "inputTokens": 118,
+      "ms": 526,
+      "cost": 0.0002942
     },
     {
       "answers": {
@@ -12077,8 +12557,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 126,
-      "cost": 0.000295
+      "inputTokens": 118,
+      "ms": 496,
+      "cost": 0.0002942
     }
   ],
   "mfj-explicit": [
@@ -12169,8 +12650,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.0002948
+      "inputTokens": 116,
+      "ms": 556,
+      "cost": 0.000294
     },
     {
       "answers": {
@@ -12259,8 +12741,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.00028544
+      "inputTokens": 116,
+      "ms": 501,
+      "cost": 0.000294
     },
     {
       "answers": {
@@ -12349,8 +12832,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.00028544
+      "inputTokens": 116,
+      "ms": 439,
+      "cost": 0.000294
     }
   ],
   "mfs-explicit": [
@@ -12441,8 +12925,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 526,
+      "cost": 0.0002947
     },
     {
       "answers": {
@@ -12531,8 +13016,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002955
+      "inputTokens": 123,
+      "ms": 496,
+      "cost": 0.00028543
     },
     {
       "answers": {
@@ -12621,8 +13107,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 131,
-      "cost": 0.0002856
+      "inputTokens": 123,
+      "ms": 759,
+      "cost": 0.00028543
     }
   ],
   "negation-not-blind": [
@@ -12713,8 +13200,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.0002948
+      "inputTokens": 116,
+      "ms": 759,
+      "cost": 0.000294
     },
     {
       "answers": {
@@ -12803,8 +13291,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.00028544
+      "inputTokens": 116,
+      "ms": 517,
+      "cost": 0.000294
     },
     {
       "answers": {
@@ -12893,8 +13382,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 124,
-      "cost": 0.00028544
+      "inputTokens": 116,
+      "ms": 456,
+      "cost": 0.000294
     }
   ],
   "negation-not-married": [
@@ -12985,8 +13475,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 128,
-      "cost": 0.0002952
+      "inputTokens": 120,
+      "ms": 586,
+      "cost": 0.0002944
     },
     {
       "answers": {
@@ -13075,98 +13566,13 @@
           "confidence": 1
         }
       },
-      "inputTokens": 128,
-      "cost": 0.0002952
+      "inputTokens": 120,
+      "ms": 456,
+      "cost": 0.0002944
     },
     {
-      "answers": {
-        "__in_domain": {
-          "type": "noul",
-          "noul": 1
-        },
-        "/filer/filingStatus": {
-          "type": "choice",
-          "choice": "single",
-          "probabilities": {
-            "single": 1,
-            "mfj": 0,
-            "mfs": 0,
-            "hoh": 0,
-            "qss": 0,
-            "not_stated": 0
-          },
-          "confidence": 1
-        },
-        "/filer/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/spouse/blind": {
-          "type": "noul",
-          "noul": 0
-        },
-        "/filer/address/state": {
-          "type": "choice",
-          "choice": "NV",
-          "probabilities": {
-            "not_stated": 0,
-            "AL": 0,
-            "AK": 0,
-            "AZ": 0,
-            "AR": 0,
-            "CA": 0,
-            "CO": 0,
-            "CT": 0,
-            "DE": 0,
-            "DC": 0,
-            "FL": 0,
-            "GA": 0,
-            "HI": 0,
-            "ID": 0,
-            "IL": 0,
-            "IN": 0,
-            "IA": 0,
-            "KS": 0,
-            "KY": 0,
-            "LA": 0,
-            "ME": 0,
-            "MD": 0,
-            "MA": 0,
-            "MI": 0,
-            "MN": 0,
-            "MS": 0,
-            "MO": 0,
-            "MT": 0,
-            "NE": 0,
-            "NV": 1,
-            "NH": 0,
-            "NJ": 0,
-            "NM": 0,
-            "NY": 0,
-            "NC": 0,
-            "ND": 0,
-            "OH": 0,
-            "OK": 0,
-            "OR": 0,
-            "PA": 0,
-            "RI": 0,
-            "SC": 0,
-            "SD": 0,
-            "TN": 0,
-            "TX": 0,
-            "UT": 0,
-            "VT": 0,
-            "VA": 0,
-            "WA": 0,
-            "WV": 0,
-            "WI": 0,
-            "WY": 0
-          },
-          "confidence": 1
-        }
-      },
-      "inputTokens": 128,
-      "cost": 0.0002952
+      "answers": {},
+      "inputTokens": 0
     }
   ],
   "out-of-domain-lookalike": [
@@ -13201,7 +13607,7 @@
           "type": "choice",
           "choice": "not_stated",
           "probabilities": {
-            "not_stated": 1,
+            "not_stated": 0,
             "AL": 0,
             "AK": 0,
             "AZ": 0,
@@ -13254,11 +13660,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 1
+          "confidence": 0
         }
       },
-      "inputTokens": 137,
-      "cost": 0.0002961
+      "inputTokens": 129,
+      "ms": 517,
+      "cost": 0.0002953
     },
     {
       "answers": {
@@ -13291,7 +13698,7 @@
           "type": "choice",
           "choice": "not_stated",
           "probabilities": {
-            "not_stated": 1,
+            "not_stated": 0,
             "AL": 0,
             "AK": 0,
             "AZ": 0,
@@ -13344,11 +13751,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 1
+          "confidence": 0
         }
       },
-      "inputTokens": 137,
-      "cost": 0.0002961
+      "inputTokens": 129,
+      "ms": 456,
+      "cost": 0.0002953
     },
     {
       "answers": {
@@ -13381,7 +13789,7 @@
           "type": "choice",
           "choice": "not_stated",
           "probabilities": {
-            "not_stated": 1,
+            "not_stated": 0,
             "AL": 0,
             "AK": 0,
             "AZ": 0,
@@ -13434,11 +13842,12 @@
             "WI": 0,
             "WY": 0
           },
-          "confidence": 1
+          "confidence": 0
         }
       },
-      "inputTokens": 137,
-      "cost": 0.0002961
+      "inputTokens": 129,
+      "ms": 449,
+      "cost": 0.00028558
     }
   ],
   "out-of-domain-recipe": [
@@ -13529,8 +13938,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 133,
-      "cost": 0.0002957
+      "inputTokens": 125,
+      "ms": 449,
+      "cost": 0.0002949
     },
     {
       "answers": {
@@ -13619,8 +14029,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 133,
-      "cost": 0.00028571
+      "inputTokens": 125,
+      "ms": 503,
+      "cost": 0.0002949
     },
     {
       "answers": {
@@ -13709,8 +14120,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 133,
-      "cost": 0.00028571
+      "inputTokens": 125,
+      "ms": 413,
+      "cost": 0.00028545
     }
   ],
   "qss": [
@@ -13722,14 +14134,14 @@
         },
         "/filer/filingStatus": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "qss",
           "probabilities": {
             "single": 0,
             "mfj": 0,
             "mfs": 0,
             "hoh": 0,
-            "qss": 0,
-            "not_stated": 1
+            "qss": 1,
+            "not_stated": 0
           },
           "confidence": 1
         },
@@ -13801,8 +14213,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 135,
-      "cost": 0.0002959
+      "inputTokens": 127,
+      "ms": 489,
+      "cost": 0.0002951
     },
     {
       "answers": {
@@ -13812,14 +14225,14 @@
         },
         "/filer/filingStatus": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "qss",
           "probabilities": {
             "single": 0,
             "mfj": 0,
             "mfs": 0,
             "hoh": 0,
-            "qss": 0,
-            "not_stated": 1
+            "qss": 1,
+            "not_stated": 0
           },
           "confidence": 1
         },
@@ -13891,8 +14304,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 135,
-      "cost": 0.0002959
+      "inputTokens": 127,
+      "ms": 413,
+      "cost": 0.0002951
     },
     {
       "answers": {
@@ -13902,14 +14316,14 @@
         },
         "/filer/filingStatus": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "qss",
           "probabilities": {
             "single": 0,
             "mfj": 0,
             "mfs": 0,
             "hoh": 0,
-            "qss": 0,
-            "not_stated": 1
+            "qss": 1,
+            "not_stated": 0
           },
           "confidence": 1
         },
@@ -13981,8 +14395,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 135,
-      "cost": 0.00028573
+      "inputTokens": 127,
+      "ms": 434,
+      "cost": 0.00028547
     }
   ],
   "silence-on-everything": [
@@ -14073,8 +14488,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.0002945
+      "inputTokens": 113,
+      "ms": 503,
+      "cost": 0.0002937
     },
     {
       "answers": {
@@ -14163,8 +14579,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.00028532
+      "inputTokens": 113,
+      "ms": 413,
+      "cost": 0.00028515
     },
     {
       "answers": {
@@ -14253,8 +14670,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 121,
-      "cost": 0.00028532
+      "inputTokens": 113,
+      "ms": 434,
+      "cost": 0.00028515
     }
   ],
   "single-plain": [
@@ -14345,8 +14763,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 434,
+      "cost": 0.0002948
     },
     {
       "answers": {
@@ -14435,8 +14854,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.0002956
+      "inputTokens": 124,
+      "ms": 518,
+      "cost": 0.00028544
     },
     {
       "answers": {
@@ -14525,8 +14945,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 132,
-      "cost": 0.00028561
+      "inputTokens": 124,
+      "ms": 453,
+      "cost": 0.0002948
     }
   ],
   "ssn-and-zip": [
@@ -14617,8 +15038,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 138,
-      "cost": 0.0002962
+      "inputTokens": 130,
+      "ms": 518,
+      "cost": 0.0002954
     },
     {
       "answers": {
@@ -14707,8 +15129,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 138,
-      "cost": 0.0002962
+      "inputTokens": 130,
+      "ms": 453,
+      "cost": 0.0002954
     },
     {
       "answers": {
@@ -14797,8 +15220,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 138,
-      "cost": 0.00028585
+      "inputTokens": 130,
+      "ms": 446,
+      "cost": 0.0002954
     }
   ],
   "state-ambiguous-move": [
@@ -14810,14 +15234,14 @@
         },
         "/filer/filingStatus": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "single",
           "probabilities": {
-            "single": 0,
+            "single": 1,
             "mfj": 0,
             "mfs": 0,
             "hoh": 0,
             "qss": 0,
-            "not_stated": 1
+            "not_stated": 0
           },
           "confidence": 1
         },
@@ -14889,8 +15313,9 @@
           "confidence": 0.4901960784313726
         }
       },
-      "inputTokens": 126,
-      "cost": 0.000295
+      "inputTokens": 118,
+      "ms": 518,
+      "cost": 0.0002942
     },
     {
       "answers": {
@@ -14900,14 +15325,14 @@
         },
         "/filer/filingStatus": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "single",
           "probabilities": {
-            "single": 0,
+            "single": 1,
             "mfj": 0,
             "mfs": 0,
             "hoh": 0,
             "qss": 0,
-            "not_stated": 1
+            "not_stated": 0
           },
           "confidence": 1
         },
@@ -14979,8 +15404,9 @@
           "confidence": 0.4901960784313726
         }
       },
-      "inputTokens": 126,
-      "cost": 0.000295
+      "inputTokens": 118,
+      "ms": 453,
+      "cost": 0.00028529
     },
     {
       "answers": {
@@ -14990,14 +15416,14 @@
         },
         "/filer/filingStatus": {
           "type": "choice",
-          "choice": "not_stated",
+          "choice": "single",
           "probabilities": {
-            "single": 0,
+            "single": 1,
             "mfj": 0,
             "mfs": 0,
             "hoh": 0,
             "qss": 0,
-            "not_stated": 1
+            "not_stated": 0
           },
           "confidence": 1
         },
@@ -15069,8 +15495,9 @@
           "confidence": 0.4901960784313726
         }
       },
-      "inputTokens": 126,
-      "cost": 0.000295
+      "inputTokens": 118,
+      "ms": 446,
+      "cost": 0.00028529
     }
   ],
   "state-explicit-code": [
@@ -15161,8 +15588,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 119,
-      "cost": 0.0002943
+      "inputTokens": 111,
+      "ms": 446,
+      "cost": 0.0002935
     },
     {
       "answers": {
@@ -15251,8 +15679,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 119,
-      "cost": 0.0002853
+      "inputTokens": 111,
+      "ms": 387,
+      "cost": 0.00028504
     },
     {
       "answers": {
@@ -15341,8 +15770,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 119,
-      "cost": 0.0002853
+      "inputTokens": 111,
+      "ms": 452,
+      "cost": 0.0002935
     }
   ],
   "state-from-city": [
@@ -15433,8 +15863,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 387,
+      "cost": 0.0002939
     },
     {
       "answers": {
@@ -15523,8 +15954,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.00028543
+      "inputTokens": 115,
+      "ms": 452,
+      "cost": 0.0002939
     },
     {
       "answers": {
@@ -15613,8 +16045,9 @@
           "confidence": 1
         }
       },
-      "inputTokens": 123,
-      "cost": 0.0002947
+      "inputTokens": 115,
+      "ms": 475,
+      "cost": 0.00028517
     }
   ]
 }

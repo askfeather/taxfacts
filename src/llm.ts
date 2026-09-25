@@ -18,7 +18,7 @@ const SYSTEM = `You answer typed questions about a text by returning a probabili
 For each question return probabilities over exactly the given options that sum to 1.
 Be calibrated: a probability of 0.9 should be right about 90% of the time.
 If the text does not state or clearly imply an answer, put the mass on the option that says so.
-Never infer a fact from an entity that merely appears nearby - a city named as a charity's location is not where the taxpayer lives.`;
+Only report a fact about the person writing, and only when the text states or clearly implies it.`;
 
 /**
  * A second engine behind the same interface, asking a general model for the
