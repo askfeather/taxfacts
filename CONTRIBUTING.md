@@ -29,10 +29,10 @@ closed without discussion.
 
 ## Every case needs an authority
 
-An IRC section, a form line, a Rev. Proc., a publication. Not because we are
-being precious, but because "is this eval interesting?" cannot be reviewed at
-volume and "does the cited authority say what you claim?" can. The citation is
-what makes a case checkable by someone who did not write it.
+An IRC section, a form line, a Rev. Proc., a publication. "Is this eval
+interesting?" cannot be reviewed at volume. "Does the cited authority say what
+you claim?" can. The citation is what makes a case checkable by someone who did
+not write it.
 
 This is why we do not accept cases that rest only on the contributor's
 judgement, and it is the one place we differ from most benchmark repos.

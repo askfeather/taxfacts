@@ -1,5 +1,5 @@
 /**
- * Live call against the real API. Prints what came back so the spike can be
+ * Live call against the real API. Prints what came back so the response shape can be
  * judged on observed behaviour rather than on the vendor's documentation.
  *
  *   TYPESAFE_API_KEY=... pnpm spike "I got married in June and bought a house"
@@ -43,4 +43,4 @@ for (const f of out.facts)
   );
 
 console.log('\nneeds');
-for (const n of out.needs) console.log(`  ${n.path} — ${n.why}`);
+for (const n of out.needs) console.log(`  ${n.path}: ${n.why}`);

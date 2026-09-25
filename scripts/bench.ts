@@ -20,51 +20,62 @@ import { LlmBackend } from '../src/llm';
 import { FILER_PATHS } from '../src/paths';
 import { add, EMPTY, type Fixture, type Score, scoreOne } from '../src/score';
 import type { AskResult, DecisionBackend } from '../src/types';
+import { VertexBackend } from '../src/vertex';
 
 /**
- * Three engines, so the comparison can separate model CLASS from model SIZE.
- * If a bigger general model abstains properly, the finding is about scale.
- * If it does not, the finding is about what kind of model this is.
+ * Each vendor's current cheap model, plus the two previous-generation Google
+ * models, which are kept because their confidence saturation is the most
+ * extreme in the set.
  */
 const ENGINES: Record<string, string | null> = {
   jev: null,
   'flash-lite': 'google/gemini-2.5-flash-lite',
   flash: 'google/gemini-2.5-flash',
-  'flash-3.8': 'google/gemini-3.8-flash',
-  'sonnet-5': 'anthropic/claude-sonnet-5',
 };
 
 /** Called at the origin instead of through the gateway, using the provider's
  *  own key. Same prompt, same schema, same confidence formula. */
+/** Google's current models, over Vertex rather than a gateway. Set
+ *  GOOGLE_CLOUD_PROJECT and supply GOOGLE_ACCESS_TOKEN from
+ *  `gcloud auth print-access-token`. */
+const requireProject = () => {
+  const p = process.env.GOOGLE_CLOUD_PROJECT;
+  if (!p) throw new Error('GOOGLE_CLOUD_PROJECT is not set');
+  return p;
+};
+
+const VERTEX: Record<string, string> = {
+  'flash-3.8': 'gemini-3.8-flash',
+  'flash-lite-3.5': 'gemini-3.5-flash-lite',
+};
+
 const DIRECT: Record<string, { env: string; model: string }> = {
-  'sonnet-5-direct': { env: 'ANTHROPIC_API_KEY', model: 'claude-sonnet-5' },
-  'opus-5-direct': { env: 'ANTHROPIC_API_KEY', model: 'claude-opus-5' },
   'haiku-direct': { env: 'ANTHROPIC_API_KEY', model: 'claude-haiku-4-5' },
-  // OpenAI's entry in the same tier: gpt-6-luna matches Flash-Lite's price
-  // point, gpt-5-nano is the cheapest thing in the bracket.
   'luna-direct': { env: 'OPENAI_API_KEY', model: 'gpt-6-luna' },
-  'nano-direct': { env: 'OPENAI_API_KEY', model: 'gpt-5-nano' },
-  'astra-direct': { env: 'OPENAI_API_KEY', model: 'gpt-6-astra' },
 };
 const engineArg = process.argv.indexOf('--engine');
 const ENGINE = engineArg > -1 ? (process.argv[engineArg + 1] ?? 'jev') : 'jev';
-if (!(ENGINE in ENGINES) && !(ENGINE in DIRECT))
+if (!(ENGINE in ENGINES) && !(ENGINE in DIRECT) && !(ENGINE in VERTEX))
   throw new Error(`unknown engine: ${ENGINE}`);
 const NAMES: Record<string, string> = {
   jev: 'jev',
   'flash-lite': 'gemini-2.5-flash-lite',
   flash: 'gemini-2.5-flash',
   'flash-3.8': 'gemini-3.8-flash',
-  'sonnet-5': 'claude-sonnet-5',
-  'sonnet-5-direct': 'claude-sonnet-5',
-  'opus-5-direct': 'claude-opus-5',
+  'flash-lite-3.5': 'gemini-3.5-flash-lite',
   'haiku-direct': 'claude-haiku-4.5',
   'luna-direct': 'gpt-6-luna',
-  'nano-direct': 'gpt-5-nano',
-  'astra-direct': 'gpt-6-astra',
 };
 const CACHE = `bench-data/${NAMES[ENGINE] ?? ENGINE}.json`;
 const GATES = [0.5, 0.7, 0.8, 0.9, 0.95, 0.98, 0.99, 0.995];
+
+/** The published tables score only the paths a model fills. Without this the
+ *  harness also counts the three a regex fills, which every engine gets right,
+ *  so its `correct` column sits 57 higher on every row. */
+const MODEL_ONLY = process.argv.includes('--model-paths');
+const SCORED = new Set(
+  FILER_PATHS.filter((p) => p.via === 'jev').map((p) => p.path),
+);
 
 const fixtures: Fixture[] = readdirSync('fixtures')
   .filter((f) => f.endsWith('.json'))
@@ -82,18 +93,27 @@ let cache: Cache = {};
 const persist = () => writeFileSync(CACHE, JSON.stringify(cache, null, 2));
 
 if (live) {
+  const vertexModel = VERTEX[ENGINE];
   const direct = DIRECT[ENGINE];
-  const key = direct ? process.env[direct.env] : process.env.OPENROUTER_API_KEY;
+  const key = vertexModel
+    ? process.env.GOOGLE_ACCESS_TOKEN
+    : direct
+      ? process.env[direct.env]
+      : process.env.OPENROUTER_API_KEY;
   if (!key)
-    throw new Error(`${direct?.env ?? 'OPENROUTER_API_KEY'} is not set`);
+    throw new Error(
+      `${vertexModel ? 'GOOGLE_ACCESS_TOKEN' : (direct?.env ?? 'OPENROUTER_API_KEY')} is not set`,
+    );
 
-  const backend = direct
-    ? direct.env === 'ANTHROPIC_API_KEY'
-      ? new AnthropicBackend(key, direct.model)
-      : new OpenAiBackend(key, direct.model)
-    : ENGINES[ENGINE]
-      ? new LlmBackend(key, ENGINES[ENGINE] as string)
-      : new JevBackend(key, { route: 'openrouter' });
+  const backend = vertexModel
+    ? new VertexBackend(key, vertexModel, requireProject())
+    : direct
+      ? direct.env === 'ANTHROPIC_API_KEY'
+        ? new AnthropicBackend(key, direct.model)
+        : new OpenAiBackend(key, direct.model)
+      : ENGINES[ENGINE]
+        ? new LlmBackend(key, ENGINES[ENGINE] as string)
+        : new JevBackend(key, { route: 'openrouter' });
   const questions = Object.fromEntries(
     FILER_PATHS.filter((s) => s.question).map((s) => [s.path, s.question]),
   );
@@ -149,20 +169,32 @@ const replay = (r: AskResult): DecisionBackend => ({
   },
 });
 
-console.log(`\nengine: ${ENGINE}`);
+console.log(
+  `\nengine: ${ENGINE}${MODEL_ONLY ? ' (model-answerable paths only)' : ''}`,
+);
 console.log('gate     correct  wrongVal  missed  overreach   flaky');
 for (const gate of GATES) {
   let total: Score = { ...EMPTY };
   let flaky = 0;
   for (const f of fixtures) {
     const shapes = new Set<string>();
+    const scoped = MODEL_ONLY
+      ? {
+          ...f,
+          expect: Object.fromEntries(
+            Object.entries(f.expect).filter(([p]) => SCORED.has(p)),
+          ),
+          abstain: f.abstain.filter((p) => SCORED.has(p)),
+        }
+      : f;
     for (const r of cache[f.id] ?? []) {
       const out = await extract(f.prose, { backend: replay(r), gate });
-      total = add(total, scoreOne(f, out));
+      total = add(total, scoreOne(scoped, out));
       shapes.add(
         out.facts
           .filter((x) => x.status === 'complete')
-          .map((x) => x.path)
+          .filter((x) => !MODEL_ONLY || SCORED.has(x.path))
+          .map((x) => `${x.path}=${x.value}`)
           .sort()
           .join(','),
       );

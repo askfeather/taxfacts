@@ -1,4 +1,7 @@
 node_modules
 dist
 .env
-.env.local
+.env.*
+.tmp
+*.log
+.DS_Store

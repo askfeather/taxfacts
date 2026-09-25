@@ -127,7 +127,11 @@ export class LlmBackend implements DecisionBackend {
 
     const json = (await res.json()) as {
       choices: { message: { content: string } }[];
-      usage?: { prompt_tokens?: number; cost?: number };
+      usage?: {
+        prompt_tokens?: number;
+        completion_tokens?: number;
+        cost?: number;
+      };
     };
     let raw: Record<string, Record<string, number>> = {};
     try {
@@ -143,6 +147,7 @@ export class LlmBackend implements DecisionBackend {
     return {
       answers,
       inputTokens: json.usage?.prompt_tokens ?? 0,
+      outputTokens: json.usage?.completion_tokens ?? 0,
       ms: lastMs,
       cost: json.usage?.cost,
     };

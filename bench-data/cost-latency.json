@@ -1,51 +1,100 @@
 {
   "jev": {
-    "perDecision": 3.634e-5,
-    "per1k": 0.0363,
-    "inputTokens": 865,
-    "p50": 301,
-    "p95": 591
-  },
-  "gpt-5-nano": {
-    "perDecision": 5.37e-5,
-    "per1k": 0.0537,
-    "inputTokens": 1074,
-    "p50": 3155,
-    "p95": 3559
-  },
-  "gemini-2.5-flash-lite": {
-    "perDecision": 1.316e-5,
-    "per1k": 0.0132,
-    "inputTokens": 132,
-    "p50": 575,
-    "p95": 1066
+    "route": "openrouter",
+    "n": 10,
+    "inputTokens": 860,
+    "outputTokens": 0,
+    "priceIn": 0.042,
+    "priceOut": 0,
+    "perCall": 0.000036120000000000007,
+    "per1k": 0.036120000000000006,
+    "gatewayBilledPerCall": 0.00003612,
+    "p50": 431,
+    "p95": 1603,
+    "all": [401, 404, 419, 422, 425, 431, 457, 479, 840, 1603]
   },
   "gpt-6-luna": {
-    "perDecision": 0.0001074,
-    "per1k": 0.1074,
-    "inputTokens": 1074,
-    "p50": 2644,
-    "p95": 3388
+    "route": "openai",
+    "n": 10,
+    "inputTokens": 1063,
+    "outputTokens": 304.6,
+    "priceIn": 0.1,
+    "priceOut": 0.5,
+    "perCall": 0.0002586,
+    "per1k": 0.2586,
+    "gatewayBilledPerCall": null,
+    "p50": 2657,
+    "p95": 3792,
+    "all": [2295, 2439, 2545, 2575, 2657, 2657, 2818, 2861, 2880, 3792]
   },
-  "gemini-2.5-flash": {
-    "perDecision": 3.951e-5,
-    "per1k": 0.0395,
-    "inputTokens": 132,
-    "p50": 548,
-    "p95": 903
+  "gemini-3.5-flash-lite": {
+    "route": "vertex",
+    "n": 10,
+    "inputTokens": 2319,
+    "outputTokens": 706,
+    "priceIn": 0.3,
+    "priceOut": 2.5,
+    "perCall": 0.0024606999999999997,
+    "per1k": 2.4606999999999997,
+    "gatewayBilledPerCall": null,
+    "p50": 2281,
+    "p95": 3010,
+    "all": [2197, 2241, 2242, 2248, 2273, 2281, 2342, 2447, 2492, 3010]
   },
   "gemini-3.8-flash": {
-    "perDecision": 0.00136876,
-    "per1k": 1.3688,
-    "inputTokens": 1825,
-    "p50": 2812,
-    "p95": 12204
+    "route": "vertex",
+    "n": 10,
+    "inputTokens": 2319,
+    "outputTokens": 710.4,
+    "priceIn": 0.75,
+    "priceOut": 3.75,
+    "perCall": 0.00440325,
+    "per1k": 4.40325,
+    "gatewayBilledPerCall": null,
+    "p50": 5580,
+    "p95": 9049,
+    "all": [4339, 4540, 4658, 4819, 5015, 5580, 5942, 6099, 6403, 9049]
   },
   "claude-haiku-4.5": {
-    "perDecision": 0.00241175,
-    "per1k": 2.4117,
-    "inputTokens": 2412,
-    "p50": 3226,
-    "p95": 3413
+    "route": "anthropic",
+    "n": 10,
+    "inputTokens": 2397,
+    "outputTokens": 552,
+    "priceIn": 1,
+    "priceOut": 5,
+    "perCall": 0.005157,
+    "per1k": 5.157,
+    "gatewayBilledPerCall": null,
+    "p50": 2684,
+    "p95": 3237,
+    "all": [2423, 2465, 2484, 2549, 2608, 2684, 2790, 2847, 2991, 3237]
+  },
+  "gemini-2.5-flash": {
+    "route": "openrouter",
+    "n": 10,
+    "inputTokens": 118,
+    "outputTokens": 578,
+    "priceIn": 0.3,
+    "priceOut": 2.5,
+    "perCall": 0.0014804,
+    "per1k": 1.4804,
+    "gatewayBilledPerCall": 0.001475054,
+    "p50": 804,
+    "p95": 1192,
+    "all": [608, 757, 767, 775, 797, 804, 846, 848, 1153, 1192]
+  },
+  "gemini-2.5-flash-lite": {
+    "route": "openrouter",
+    "n": 10,
+    "inputTokens": 118,
+    "outputTokens": 706,
+    "priceIn": 0.1,
+    "priceOut": 0.4,
+    "perCall": 0.00029420000000000005,
+    "per1k": 0.2942000000000001,
+    "gatewayBilledPerCall": 0.00028885400000000006,
+    "p50": 755,
+    "p95": 860,
+    "all": [590, 622, 624, 661, 701, 755, 759, 827, 833, 860]
   }
 }

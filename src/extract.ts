@@ -9,23 +9,26 @@ import type {
 } from './types';
 
 /**
- * The model never abstains on its own. An independent pre-registered run fed
- * it 30 out-of-scope inputs and it flagged none, scoring a cake recipe at 0.94
- * and random letters at 0.97. Its confidence is also uninformative between
- * 0.50 and 0.95 and only reliable at the top.
+ * Published evaluations report that the model does not abstain unless an
+ * out-of-scope option is supplied, scoring a cake recipe at 0.94 confidence
+ * when asked a technical question. With the explicit not-stated option this
+ * harness adds, the same recipe scores 0.01 in domain.
  *
- * 0.99 was the first guess and the corpus says it is wrong: it discards 14 of
- * 87 correct facts and starts flapping, because confidence is quantized to
- * 0.01 and 0.99 sits on a rounding boundary. 0.95 is the top of the plateau -
- * maximum correct, zero overreach, zero run-to-run variance.
+ * 0.95 is the top of the plateau: overreach first reaches its floor of 3 and
+ * the reported fact set stops varying between runs. 0.99 discards 37 of Jev's
+ * 282 correct facts and flaps, because confidence is quantized to 0.01 and 0.99
+ * sits on a rounding boundary. Chosen on Jev, on this corpus, with no held-out
+ * split.
  */
 export const GATE = 0.95;
 
 /**
- * Measured separation on the fixture corpus: a recipe scores 0.01 and an
- * invoice sales-tax question 0.17, while the weakest genuine filer sentence
- * scores 0.39. A 0.5 cut sat inside the in-domain cluster and rejected real
- * input, so the abort sits between the two clusters instead.
+ * Measured on the fixture corpus: a recipe scores 0.01 and an invoice sales-tax
+ * question 0.17, against 0.31 for the weakest genuine filer sentence. 0.30
+ * leaves a margin of 0.01, which is thin, and one genuine fixture
+ * (c-vision-unclear) scores 0.03 and is screened out. Removing this floor
+ * changes no engine's over-assertion count on this corpus, so it is a guard
+ * rather than a load-bearing mechanism.
  */
 export const IN_DOMAIN_FLOOR = 0.3;
 
@@ -50,10 +53,11 @@ function buildQuestions(specs: PathSpec[]): Record<string, Question> {
 }
 
 /**
- * Below this a `noul` is a confident no, which is silence. Mirroring the gate
- * as `1 - gate` was wrong: measured, an unmentioned fact comes back at 0.02 to
- * 0.03, not 0, so a 0.01 floor called every silent fact ambiguous. Ambiguity is
- * a middle band, not the complement of certainty.
+ * Below this a `noul` is a confident no, which is silence. Measured, an
+ * unmentioned fact comes back at 0.02 to 0.03 rather than 0, so this floor sits
+ * at 0.1 rather than mirroring the gate as `1 - gate`, which would call every
+ * silent fact ambiguous. Ambiguity is a middle band, not the complement of
+ * certainty.
  */
 export const SILENCE = 0.1;
 

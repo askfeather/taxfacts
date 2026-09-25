@@ -8,8 +8,8 @@ import type { AskResult, DecisionBackend, Question } from './types';
  * Same system prompt, same JSON schema and the same confidence formula as
  * every other engine, so only the transport differs. Going direct also
  * removes the "maybe the gateway translated something" objection to the
- * published numbers - but it does mean latency is no longer comparable across
- * engines, because the network path is no longer shared. Accuracy and
+ * published numbers. It does mean latency is not comparable across engines,
+ * because the network path differs. Accuracy and
  * overreach are unaffected; see BENCHMARK.md.
  */
 
@@ -84,6 +84,7 @@ export class AnthropicBackend implements DecisionBackend {
     return {
       answers: answersFrom(raw, questions),
       inputTokens: json.usage?.input_tokens ?? 0,
+      outputTokens: json.usage?.output_tokens ?? 0,
       ms: lastMs,
     };
   }
@@ -119,6 +120,7 @@ export class OpenAiBackend implements DecisionBackend {
       {
         model: this.model,
         max_completion_tokens: MAX_TOKENS,
+        temperature: 0,
         // Non-thinking, the convention every published comparison in this
         // space uses for its baseline. Left at the default these models reason
         // for 6-30s on a 52-option schema, where no other engine here reasons
@@ -144,7 +146,7 @@ export class OpenAiBackend implements DecisionBackend {
 
     const json = (await res.json()) as {
       choices: { message: { content: string | null } }[];
-      usage?: { prompt_tokens?: number };
+      usage?: { prompt_tokens?: number; completion_tokens?: number };
     };
     let raw: Record<string, Record<string, number>> = {};
     try {
@@ -158,6 +160,7 @@ export class OpenAiBackend implements DecisionBackend {
     return {
       answers: answersFrom(raw, questions),
       inputTokens: json.usage?.prompt_tokens ?? 0,
+      outputTokens: json.usage?.completion_tokens ?? 0,
       ms: lastMs,
     };
   }

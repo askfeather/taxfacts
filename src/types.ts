@@ -1,4 +1,4 @@
-/** Jev wire shapes (POST /v1/systemone) and this spike's own result types. */
+/** Jev wire shapes (POST /v1/systemone) and this library's own result types. */
 
 export type Question =
   | { type: 'noul'; instructions: string }
@@ -22,6 +22,9 @@ export type Answer =
 export interface AskResult {
   answers: Record<string, Answer>;
   inputTokens: number;
+  /** Generated tokens. Zero for Jev, which emits no text at all, and the
+   *  reason the two routes cost different amounts for the same decision. */
+  outputTokens?: number;
   /** Gateways report it; TypeSafe direct does not. */
   cost?: number;
   /** Wall clock for the call, including network. Not comparable across
@@ -29,10 +32,7 @@ export interface AskResult {
   ms?: number;
 }
 
-/**
- * One method, so the model behind it can be swapped. Jev is six days old, has
- * no SLA and caps liability at $50, so nothing above this line may import it.
- */
+/** One method, so the model behind it can be swapped. */
 export interface DecisionBackend {
   ask(state: string, questions: Record<string, Question>): Promise<AskResult>;
 }
