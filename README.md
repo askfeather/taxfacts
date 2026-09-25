@@ -53,6 +53,43 @@ into that input, and none of the public tax benchmarks score that step. This
 sits upstream of all of them, which makes it complementary rather than
 competitive. Fact paths follow the IRS Fact Graph's vocabulary where one exists.
 
+## What the input is, and what it is not
+
+The prose this reads comes from four places in a real practice: **client
+emails**, the **free-text box** at the end of an intake organizer, **chat**, and
+a preparer's own **call notes**. Not from PDFs. W-2s, 1099s and prior-year
+returns are structured documents with their own extraction path, and nothing
+here touches them.
+
+The use it is built for is the open-items list. A client writes three
+paragraphs, and what a preparer needs back is the facts it establishes plus the
+questions it leaves open, each with the authority for why the question exists.
+
+**The corpus is shorter than that.** The median fixture is 76 characters and
+carries 3 judged facts; the longest is 269. A real client email is 500 to 2,000
+characters and carries a dozen interacting facts. So this benchmark measures one
+operation cleanly - given a span of text and a closed question, does the model
+know whether the text answers it - and does not measure four things a real
+document adds:
+
+- **Interacting facts.** "We married in June, she kept her Seattle apartment, I
+  moved to Denver in August" makes residency contested and may trigger part-year
+  apportionment. Our fixtures isolate one or two facts each.
+- **More than two people.** Only filer and spouse are modelled, so the fixtures
+  rarely force a decision about whose fact it is.
+- **Time.** Tax facts are year-scoped. The fixtures assume the current year.
+- **Noise and revision.** Signatures, small talk, and threads where a fact is
+  retracted two messages later.
+
+One consequence worth stating: **the cost multiples are short-input numbers.**
+Jev's lead comes largely from writing no output tokens, and output is close to a
+fixed cost per call. Add a 600-token email to every engine and the gap over
+GPT-6 Luna falls from 7x to about 5x; add 2,000 tokens and it is about 4x. Still
+a real gap, because Jev's input rate is also cheaper, but it narrows.
+
+Longer cases are the contribution we want most. See
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## The benchmark
 
 **59 prose cases, 3 runs each, 5 engines, 885 live calls.** Every response is
@@ -249,6 +286,9 @@ verbatim.
 
 ## Limitations
 
+- **Sentences, not documents.** Median fixture 76 characters against 500 to
+  2,000 for a real client email. See "What the input is" above for what that
+  leaves untested.
 - **59 cases, one author**, who does not prepare tax returns for a living.
   This is the largest weakness in every number above. See
   [CONTRIBUTING.md](CONTRIBUTING.md) - cases are the contribution we want most.

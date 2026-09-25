@@ -20,6 +20,14 @@ Two kinds are equally welcome, and the second is rarer and more useful:
 - a sentence where a fact **is** determined and we miss it
 - a sentence where a fact is **not** determined and we assert it anyway
 
+**A whole client email is worth more than either.** The corpus today is short:
+the median case is 76 characters, where a real email is 500 to 2,000 and carries
+a dozen facts that interact. Paste one in with the names changed, tell us which
+facts it settles and which it leaves open, and that is the most useful thing
+anyone can send. It tests something the short cases cannot: whether an engine
+can find the four facts buried in three paragraphs of small talk without
+inventing a fifth.
+
 ## The one hard rule
 
 **Every case must be invented.** Never paste a real client's words, name, SSN,
